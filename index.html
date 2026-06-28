@@ -78,8 +78,6 @@
             background: var(--gold);
             border-radius: 10px;
         }
-
-        /* ===== NAVBAR ===== */
         .navbar {
             position: fixed;
             top: 0;
@@ -206,8 +204,6 @@
             border-radius: 4px;
             transition: var(--transition);
         }
-
-        /* ===== HERO SLIDER ===== */
         .hero-slider {
             width: 100%;
             height: calc(100vh - 72px);
@@ -264,8 +260,6 @@
         .swiper-pagination-bullet-active {
             background: var(--gold) !important;
         }
-
-        /* ===== GALLERY ===== */
         .gallery-section {
             padding: 70px 0;
         }
@@ -358,8 +352,6 @@
                 transform: rotate(360deg);
             }
         }
-
-        /* ===== TESTIMONIALS (آراء العملاء) ===== */
         .testimonials-section {
             padding: 70px 0;
             background: var(--bg-card);
@@ -436,8 +428,6 @@
         .testimonial-card .stars i {
             margin: 0 2px;
         }
-
-        /* ===== LIGHTBOX ===== */
         .lightbox-overlay {
             position: fixed;
             inset: 0;
@@ -571,8 +561,6 @@
                 height: 250px;
             }
         }
-
-        /* ===== CONTACT ===== */
         .contact-section {
             padding: 70px 0;
             background: var(--bg-card);
@@ -632,7 +620,6 @@
         .contact-card.whatsapp-card a:hover {
             color: #1ebe5b;
         }
-
         .map-wrapper {
             border-radius: var(--radius);
             overflow: hidden;
@@ -645,8 +632,6 @@
             border: none;
             filter: grayscale(0.2) invert(0.05);
         }
-
-        /* ===== WHATSAPP FLOAT ===== */
         .whatsapp-float {
             position: fixed;
             bottom: 28px;
@@ -718,8 +703,6 @@
                 display: none;
             }
         }
-
-        /* ===== MODAL ===== */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -920,8 +903,6 @@
             flex-wrap: wrap;
             margin-top: 16px;
         }
-
-        /* ===== FOOTER ===== */
         .footer {
             background: var(--bg-card);
             border-top: 1px solid rgba(196, 154, 108, 0.15);
@@ -933,8 +914,6 @@
         .footer span {
             color: var(--gold);
         }
-
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
             .hero-slider .slide-overlay h1 {
                 font-size: 2.8rem;
@@ -1093,122 +1072,63 @@
         <div class="gallery-grid" id="galleryGrid"></div>
     </section>
 
-    <!-- ===== TESTIMONIALS (آراء العملاء) ===== -->
+    <!-- ===== TESTIMONIALS ===== -->
     <section class="testimonials-section container" id="testimonials">
         <h2 class="section-title">آراء عملائنا الكرام</h2>
         <div class="testimonials-grid">
-            <!-- العميل 1: رجل -->
             <div class="testimonial-card">
                 <div class="avatar">
                     <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="أ. محمد السالمي" loading="lazy">
                 </div>
                 <div class="name">أ. محمد السالمي</div>
                 <div class="title">مستثمر عقاري</div>
-                <div class="quote">
-                    "تعامل راقٍ وإنجاز في وقت قياسي. الشقة التي حصلت عليها تفوقت على كل توقعاتي من حيث الموقع والإطلالة الخلابة. أنصح كل من يبحث عن الجودة والثقة."
-                </div>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+                <div class="quote">"تعامل راقٍ وإنجاز في وقت قياسي. الشقة التي حصلت عليها تفوقت على كل توقعاتي من حيث الموقع والإطلالة الخلابة. أنصح كل من يبحث عن الجودة والثقة."</div>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             </div>
-
-            <!-- العميل 2: امرأة -->
             <div class="testimonial-card">
                 <div class="avatar">
                     <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="د. فاطمة الحارثي" loading="lazy">
                 </div>
                 <div class="name">د. فاطمة الحارثي</div>
                 <div class="title">استشارية أسرية</div>
-                <div class="quote">
-                    "مصداقية واحترافية عالية منذ أول لقاء. وفرت لنا المؤسسة أفضل خيارات التمليك التي تناسب احتياجات عائلتنا. نشكرهم على هذا المجهود الكبير."
-                </div>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+                <div class="quote">"مصداقية واحترافية عالية منذ أول لقاء. وفرت لنا المؤسسة أفضل خيارات التمليك التي تناسب احتياجات عائلتنا. نشكرهم على هذا المجهود الكبير."</div>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             </div>
-
-            <!-- العميل 3: رجل -->
             <div class="testimonial-card">
                 <div class="avatar">
                     <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="م. عبدالله النعيمي" loading="lazy">
                 </div>
                 <div class="name">م. عبدالله النعيمي</div>
                 <div class="title">مهندس معماري</div>
-                <div class="quote">
-                    "خبرة تلتقي بالإبداع بكل معنى الكلمة. التصميم الداخلي والديكور يخطف الأنفاس، وجودة التشطيبات تفوق الخيال. فخور بأنني اخترت عقارك الأفضل."
-                </div>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+                <div class="quote">"خبرة تلتقي بالإبداع بكل معنى الكلمة. التصميم الداخلي والديكور يخطف الأنفاس، وجودة التشطيبات تفوق الخيال. فخور بأنني اخترت عقارك الأفضل."</div>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             </div>
-
-            <!-- العميل 4: امرأة (السيدة منى) -->
             <div class="testimonial-card">
                 <div class="avatar">
                     <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="السيدة منى الشامسي" loading="lazy">
                 </div>
                 <div class="name">السيدة منى الشامسي</div>
                 <div class="title">ربة منزل</div>
-                <div class="quote">
-                    "من أول زيارة شعرت بالراحة والطمأنينة. الفريق كان لطيفاً ومحترفاً، وساعدونا في اختيار منزل الأحلام لعائلتنا. الآن نحن في منزلنا الجديد ونحن سعداء جداً."
-                </div>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+                <div class="quote">"من أول زيارة شعرت بالراحة والطمأنينة. الفريق كان لطيفاً ومحترفاً، وساعدونا في اختيار منزل الأحلام لعائلتنا. الآن نحن في منزلنا الجديد ونحن سعداء جداً."</div>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             </div>
-
-            <!-- العميل 5: رجل (اللواء طارق) -->
             <div class="testimonial-card">
                 <div class="avatar">
                     <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="اللواء طارق الحمادي" loading="lazy">
                 </div>
                 <div class="name">اللواء طارق الحمادي</div>
                 <div class="title">متقاعد</div>
-                <div class="quote">
-                    "استثمار آمن وموقع استراتيجي بامتياز. أنصح الجميع بالتعامل مع مؤسسة عقارك الأفضل، فهم مثال للشركة التي تفي بوعودها وتقدم قيمة حقيقية لعملائها."
-                </div>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+                <div class="quote">"استثمار آمن وموقع استراتيجي بامتياز. أنصح الجميع بالتعامل مع مؤسسة عقارك الأفضل، فهم مثال للشركة التي تفي بوعودها وتقدم قيمة حقيقية لعملائها."</div>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             </div>
-
-            <!-- العميل 6: شركة -->
             <div class="testimonial-card">
                 <div class="avatar">
                     <img src="https://ui-avatars.com/api/?name=شركة+ريتاج&background=c49a6c&color=fff&size=128" alt="شركة ريتاج للتطوير" loading="lazy">
                 </div>
                 <div class="name">شركة ريتاج للتطوير</div>
                 <div class="title">شريك أعمال</div>
-                <div class="quote">
-                    "شراكة ناجحة وجودة لا تُضاهى. أنجزوا لنا أكثر من 20 وحدة سكنية بجودة عالية وفي وقت قياسي. نخبة من أفضل الكوادر في مجال التطوير العقاري."
-                </div>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+                <div class="quote">"شراكة ناجحة وجودة لا تُضاهى. أنجزوا لنا أكثر من 20 وحدة سكنية بجودة عالية وفي وقت قياسي. نخبة من أفضل الكوادر في مجال التطوير العقاري."</div>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             </div>
         </div>
     </section>
@@ -1243,7 +1163,6 @@
                     <h4>إنستغرام</h4>
                     <a href="https://www.instagram.com/your.best.aqaar" target="_blank">@your.best.aqaar</a>
                 </div>
-                <!-- زر واتساب الجديد -->
                 <div class="contact-card whatsapp-card">
                     <i class="fa-brands fa-whatsapp"></i>
                     <h4>واتساب</h4>
@@ -1251,603 +1170,535 @@
                 </div>
             </div>
             <div class="map-wrapper">
-                <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="موقع مؤسسة عقارك الأفضل - بيت بوس، صنعاء">
-            </iframe>
-        </div>
-    </div>
-</section>
-
-<!-- ===== WHATSAPP FLOAT ===== -->
-<a class="whatsapp-float"
-href="https://wa.me/967776259154?text=مرحباً،%20أود%20الاستفسار%20عن%20الشقق%20التمليك%20في%20مؤسسة%20عقارك%20الأفضل"
-target="_blank"
-rel="noopener"
-aria-label="تواصل واتساب">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<!-- ===== LIGHTBOX ===== -->
-<div class="lightbox-overlay" id="lightboxOverlay">
-    <div class="lightbox-content" id="lightboxContent">
-        <button class="lb-close" id="lbClose" aria-label="إغلاق">&times;</button>
-        <button class="lb-nav prev" id="lbPrev" aria-label="السابق">&#10094;</button>
-        <button class="lb-nav next" id="lbNext" aria-label="التالي">&#10095;</button>
-        <div class="lb-loader" id="lbLoader">
-            <i class="fa-solid fa-spinner"></i>
-            <span>جاري تحميل الميديا...</span>
-        </div>
-        <img id="lbImage" src="" alt="صورة المعرض" style="display:none;" />
-        <video id="lbVideo" style="display:none;" controls autoplay></video>
-        <div class="lb-iframe-wrapper" id="lbIframeWrapper" style="display:none;">
-            <iframe id="lbIframe" src="" allowfullscreen></iframe>
-        </div>
-        <div class="lb-counter" id="lbCounter"></div>
-    </div>
-</div>
-
-<!-- ===== MODAL: إدارة الصور ===== -->
-<div class="modal-overlay" id="manageModal">
-    <div class="modal-box">
-        <button class="modal-close" id="modalClose" aria-label="إغلاق">&times;</button>
-        <h2><i class="fa-regular fa-images"></i> إدارة المحتوى المرئي</h2>
-        <div class="upload-area" id="uploadArea">
-            <i class="fa-regular fa-cloud-arrow-up"></i>
-            <p>اضغط هنا لرفع صور من جهازك (سيتم ضغطها تلقائياً)</p>
-            <input type="file" id="fileInput" accept="image/*" multiple />
-        </div>
-        <div class="link-input-group">
-            <select id="mediaTypeSelect">
-                <option value="image">🖼️ صورة</option>
-                <option value="video">🎬 فيديو (MP4)</option>
-                <option value="facebook">📘 فيسبوك (تلقائي)</option>
-            </select>
-            <input type="url" id="mediaUrlInput" placeholder="الصق رابط فيسبوك أو صورة..." />
-            <button class="btn-gold" id="addLinkBtn"><i class="fa-regular fa-plus"></i> أضف</button>
-            <div class="fb-hint">
-                <i class="fa-brands fa-facebook"></i> سيتم كشف روابط فيسبوك تلقائياً وعرضها عبر oEmbed API.
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع مؤسسة عقارك الأفضل - بيت بوس، صنعاء"></iframe>
             </div>
         </div>
-        <div class="preview-grid" id="modalPreviewGrid"></div>
-        <div class="storage-actions">
-            <button class="btn-gold" id="saveImagesBtn"><i class="fa-regular fa-floppy-disk"></i> حفظ الكل</button>
-            <span style="color:var(--text-muted); font-size:0.9rem; margin-right:12px;" id="storageInfo"></span>
+    </section>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a class="whatsapp-float" href="https://wa.me/967776259154?text=مرحباً،%20أود%20الاستفسار%20عن%20الشقق%20التمليك%20في%20مؤسسة%20عقارك%20الأفضل" target="_blank" rel="noopener" aria-label="تواصل واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content" id="lightboxContent">
+            <button class="lb-close" id="lbClose" aria-label="إغلاق">&times;</button>
+            <button class="lb-nav prev" id="lbPrev" aria-label="السابق">&#10094;</button>
+            <button class="lb-nav next" id="lbNext" aria-label="التالي">&#10095;</button>
+            <div class="lb-loader" id="lbLoader"><i class="fa-solid fa-spinner"></i><span>جاري تحميل الميديا...</span></div>
+            <img id="lbImage" src="" alt="صورة المعرض" style="display:none;" />
+            <video id="lbVideo" style="display:none;" controls autoplay></video>
+            <div class="lb-iframe-wrapper" id="lbIframeWrapper" style="display:none;"><iframe id="lbIframe" src="" allowfullscreen></iframe></div>
+            <div class="lb-counter" id="lbCounter"></div>
         </div>
     </div>
-</div>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-    &copy; 2026 مؤسسة عقارك الأفضل للشقق التمليك - جميع الحقوق محفوظة
-</footer>
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="manageModal">
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose" aria-label="إغلاق">&times;</button>
+            <h2><i class="fa-regular fa-images"></i> إدارة المحتوى المرئي</h2>
+            <div class="upload-area" id="uploadArea">
+                <i class="fa-regular fa-cloud-arrow-up"></i>
+                <p>اضغط هنا لرفع صور من جهازك (سيتم ضغطها تلقائياً)</p>
+                <input type="file" id="fileInput" accept="image/*" multiple />
+            </div>
+            <div class="link-input-group">
+                <select id="mediaTypeSelect">
+                    <option value="image">🖼️ صورة</option>
+                    <option value="video">🎬 فيديو (MP4)</option>
+                    <option value="facebook">📘 فيسبوك (تلقائي)</option>
+                </select>
+                <input type="url" id="mediaUrlInput" placeholder="الصق رابط فيسبوك أو صورة..." />
+                <button class="btn-gold" id="addLinkBtn"><i class="fa-regular fa-plus"></i> أضف</button>
+                <div class="fb-hint"><i class="fa-brands fa-facebook"></i> سيتم كشف روابط فيسبوك تلقائياً وعرضها عبر oEmbed API.</div>
+            </div>
+            <div class="preview-grid" id="modalPreviewGrid"></div>
+            <div class="storage-actions">
+                <button class="btn-gold" id="saveImagesBtn"><i class="fa-regular fa-floppy-disk"></i> حفظ الكل</button>
+                <span style="color:var(--text-muted); font-size:0.9rem; margin-right:12px;" id="storageInfo"></span>
+            </div>
+        </div>
+    </div>
 
-<!-- ===== SCRIPTS ===== -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
-</script>
-<script>
-    /* ============================================================
-       البيانات الصحيحة
-       ============================================================ */
-    const SITE_NAME = 'مؤسسة عقارك الأفضل للشقق التمليك';
-    const HERO_TITLE = 'مؤسسة عقارك الأفضل';
-    const HERO_SUB = 'شقق تمليك فاخرة في قلب صنعاء';
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        &copy; 2026 مؤسسة عقارك الأفضل للشقق التمليك - جميع الحقوق محفوظة
+    </footer>
 
-    const CONTACT_PHONE_RAW = '967776259154';
-    const CONTACT_PHONE_DISPLAY = '+967 776 259 154';
-    const CONTACT_EMAIL = 'info@aqaarbest.com';
-    const CONTACT_ADDRESS = 'بيت بوس، صنعاء، اليمن';
-    const CONTACT_FB = 'https://www.facebook.com/your.best.aqaar';
-    const CONTACT_IG = 'https://www.instagram.com/your.best.aqaar';
-    const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019';
-    const WHATSAPP_MSG = 'مرحباً، أود الاستفسار عن الشقق التمليك في مؤسسة عقارك الأفضل';
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+    </script>
+    <script>
+        const SITE_NAME = 'مؤسسة عقارك الأفضل للشقق التمليك';
+        const HERO_TITLE = 'مؤسسة عقارك الأفضل';
+        const HERO_SUB = 'شقق تمليك فاخرة في قلب صنعاء';
+        const CONTACT_PHONE_RAW = '967776259154';
+        const CONTACT_PHONE_DISPLAY = '+967 776 259 154';
+        const CONTACT_EMAIL = 'info@aqaarbest.com';
+        const CONTACT_ADDRESS = 'بيت بوس، صنعاء، اليمن';
+        const CONTACT_FB = 'https://www.facebook.com/your.best.aqaar';
+        const CONTACT_IG = 'https://www.instagram.com/your.best.aqaar';
+        const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019';
+        const WHATSAPP_MSG = 'مرحباً، أود الاستفسار عن الشقق التمليك في مؤسسة عقارك الأفضل';
 
-    const BASE_IMAGES = Array.from({ length: 19 }, (_, i) => (i + 1) + 'IMG.jpg');
-    const SLIDER_ORDER = [
-        '19IMG.jpg', '2IMG.jpg', '4IMG.jpg', '10IMG.jpg',
-        '11IMG.jpg', '12IMG.jpg', '13IMG.jpg', '14IMG.jpg',
-        '15IMG.jpg', '16IMG.jpg', '17IMG.jpg', '18IMG.jpg'
-    ];
+        const BASE_IMAGES = Array.from({ length: 19 }, (_, i) => (i + 1) + 'IMG.jpg');
+        const SLIDER_ORDER = [
+            '19IMG.jpg', '2IMG.jpg', '4IMG.jpg', '10IMG.jpg',
+            '11IMG.jpg', '12IMG.jpg', '13IMG.jpg', '14IMG.jpg',
+            '15IMG.jpg', '16IMG.jpg', '17IMG.jpg', '18IMG.jpg'
+        ];
 
-    const STORAGE_KEY = 'gallery_items';
-    const oembedCache = new Map();
+        const STORAGE_KEY = 'gallery_items';
+        const oembedCache = new Map();
 
-    function isFacebookUrl(url) {
-        return url && (url.includes('facebook.com') || url.includes('fb.com'));
-    }
+        function isFacebookUrl(url) { return url && (url.includes('facebook.com') || url.includes('fb.com')); }
 
-    async function fetchFacebookEmbed(url) {
-        if (oembedCache.has(url)) return oembedCache.get(url);
-        try {
-            const apiUrl = `https://graph.facebook.com/v18.0/oembed_video?url=${encodeURIComponent(url)}`;
-            const response = await fetch(apiUrl);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
-            if (data && data.html) {
-                oembedCache.set(url, data.html);
-                return data.html;
-            } else throw new Error('لم يتم العثور على كود تضمين');
-        } catch (error) {
-            const fallbackHtml =
-                `<iframe src="https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=0&width=560" allowfullscreen></iframe>`;
-            oembedCache.set(url, fallbackHtml);
-            return fallbackHtml;
+        async function fetchFacebookEmbed(url) {
+            if (oembedCache.has(url)) return oembedCache.get(url);
+            try {
+                const apiUrl = `https://graph.facebook.com/v18.0/oembed_video?url=${encodeURIComponent(url)}`;
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                if (data && data.html) { oembedCache.set(url, data.html); return data.html; } else throw new Error(
+                    'لم يتم العثور على كود تضمين');
+            } catch (error) {
+                const fallbackHtml =
+                    `<iframe src="https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=0&width=560" allowfullscreen></iframe>`;
+                oembedCache.set(url, fallbackHtml);
+                return fallbackHtml;
+            }
         }
-    }
 
-    function getStoredItems() {
-        try { const data = localStorage.getItem(STORAGE_KEY); return data ? JSON.parse(data) : []; } catch { return []; }
-    }
+        function getStoredItems() { try { const data = localStorage.getItem(STORAGE_KEY); return data ? JSON.parse(data) :
+                    []; } catch { return []; } }
 
-    function setStoredItems(items) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-    }
+        function setStoredItems(items) { localStorage.setItem(STORAGE_KEY, JSON.stringify(items)); }
 
-    function getAllItems() {
-        const stored = getStoredItems();
-        const baseItems = BASE_IMAGES.map(src => ({ type: 'image', src, platform: 'base' }));
-        return [...baseItems, ...stored];
-    }
+        function getAllItems() {
+            const stored = getStoredItems();
+            const baseItems = BASE_IMAGES.map(src => ({ type: 'image', src, platform: 'base' }));
+            return [...baseItems, ...stored];
+        }
 
-    function buildHeroSlider() {
-        const wrapper = document.querySelector('.heroSwiper .swiper-wrapper');
-        if (!wrapper) return;
-        wrapper.innerHTML = '';
-        SLIDER_ORDER.forEach((imgName) => {
-            const slide = document.createElement('div');
-            slide.className = 'swiper-slide';
-            slide.innerHTML = `
-                    <img src="${imgName}" alt="${HERO_TITLE}" loading="lazy" decoding="async"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="slide-overlay">
-                        <h1>${HERO_TITLE}</h1>
-                        <p>${HERO_SUB}</p>
-                    </div>
-                `;
-            wrapper.appendChild(slide);
-        });
-        new Swiper('.heroSwiper', {
-            effect: 'fade',
-            fadeEffect: { crossFade: true },
-            autoplay: { delay: 3000, disableOnInteraction: false },
-            loop: true,
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            pagination: { el: '.swiper-pagination', clickable: true },
-        });
-    }
+        function buildHeroSlider() {
+            const wrapper = document.querySelector('.heroSwiper .swiper-wrapper');
+            if (!wrapper) return;
+            wrapper.innerHTML = '';
+            SLIDER_ORDER.forEach((imgName) => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                        <img src="${imgName}" alt="${HERO_TITLE}" loading="lazy" decoding="async"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="slide-overlay">
+                            <h1>${HERO_TITLE}</h1>
+                            <p>${HERO_SUB}</p>
+                        </div>
+                    `;
+                wrapper.appendChild(slide);
+            });
+            new Swiper('.heroSwiper', {
+                effect: 'fade',
+                fadeEffect: { crossFade: true },
+                autoplay: { delay: 3000, disableOnInteraction: false },
+                loop: true,
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                pagination: { el: '.swiper-pagination', clickable: true },
+            });
+        }
 
-    async function renderGallery() {
-        const grid = document.getElementById('galleryGrid');
-        if (!grid) return;
-        const items = getAllItems();
-        grid.innerHTML = '';
-        for (let index = 0; index < items.length; index++) {
-            const item = items[index];
-            const div = document.createElement('div');
-            div.className = 'gallery-item';
-            div.dataset.index = index;
+        async function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            if (!grid) return;
+            const items = getAllItems();
+            grid.innerHTML = '';
+            for (let index = 0; index < items.length; index++) {
+                const item = items[index];
+                const div = document.createElement('div');
+                div.className = 'gallery-item';
+                div.dataset.index = index;
+                const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
+                if (isFb) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'video-wrapper';
+                    wrapper.style.cssText =
+                        'position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#111;';
+                    const loader = document.createElement('div');
+                    loader.className = 'fb-loader';
+                    loader.innerHTML = `<i class="fa-brands fa-facebook"></i><span>جاري تحميل الفيديو...</span>`;
+                    wrapper.appendChild(loader);
+                    div.appendChild(wrapper);
+                    const badge = document.createElement('div');
+                    badge.className = 'media-badge';
+                    badge.innerHTML = '<i class="fa-brands fa-facebook"></i> فيسبوك';
+                    div.appendChild(badge);
+                    try {
+                        const embedHtml = await fetchFacebookEmbed(item.src);
+                        wrapper.innerHTML = '';
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = embedHtml;
+                        const iframe = tempDiv.querySelector('iframe');
+                        if (iframe) { iframe.style.cssText = 'width:100%;height:100%;border:none;';
+                            iframe.allowFullscreen = true;
+                            wrapper.appendChild(iframe); } else { wrapper.innerHTML =
+                                `<div style="color:var(--text-muted); padding:20px; text-align:center;">تعذر تحميل الفيديو</div>`; }
+                    } catch (e) { wrapper.innerHTML =
+                            `<div style="color:var(--text-muted); padding:20px; text-align:center;">حدث خطأ في تحميل الفيديو</div>`; }
+                    div.addEventListener('click', () => openLightbox(index));
+                } else if (item.type === 'video') {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'video-wrapper';
+                    const video = document.createElement('video');
+                    video.src = item.src;
+                    video.muted = true;
+                    video.playsInline = true;
+                    video.preload = 'metadata';
+                    video.setAttribute('playsinline', '');
+                    const icon = document.createElement('div');
+                    icon.className = 'play-icon';
+                    icon.innerHTML = '<i class="fa-solid fa-play"></i>';
+                    wrapper.appendChild(video);
+                    wrapper.appendChild(icon);
+                    div.appendChild(wrapper);
+                    div.addEventListener('click', () => openLightbox(index));
+                } else {
+                    const img = document.createElement('img');
+                    img.src = item.src;
+                    img.alt = `صورة ${index+1}`;
+                    img.loading = 'lazy';
+                    img.decoding = 'async';
+                    img.onerror = function() {
+                        this.style.display = 'none';
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'img-placeholder';
+                        placeholder.textContent = 'الصورة غير متوفرة';
+                        this.parentNode.appendChild(placeholder);
+                    };
+                    div.appendChild(img);
+                    div.addEventListener('click', () => openLightbox(index));
+                }
+                grid.appendChild(div);
+            }
+        }
+
+        let currentLightboxIndex = 0;
+        let lightboxItems = [];
+
+        async function openLightbox(index) {
+            lightboxItems = getAllItems();
+            if (!lightboxItems.length) return;
+            currentLightboxIndex = Math.min(Math.max(index, 0), lightboxItems.length - 1);
+            document.getElementById('lightboxOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            await showLightboxItem(currentLightboxIndex);
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+            const video = document.getElementById('lbVideo');
+            if (video) { video.pause();
+                video.currentTime = 0; }
+            const iframe = document.getElementById('lbIframe');
+            if (iframe) iframe.src = '';
+        }
+
+        async function showLightboxItem(index) {
+            const img = document.getElementById('lbImage');
+            const video = document.getElementById('lbVideo');
+            const iframeWrapper = document.getElementById('lbIframeWrapper');
+            const iframe = document.getElementById('lbIframe');
+            const loader = document.getElementById('lbLoader');
+            const counter = document.getElementById('lbCounter');
+            const item = lightboxItems[index] || { type: 'image', src: '' };
+            img.style.display = 'none';
+            video.style.display = 'none';
+            iframeWrapper.style.display = 'none';
+            loader.style.display = 'flex';
             const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
-            if (isFb) {
-                const wrapper = document.createElement('div');
-                wrapper.className = 'video-wrapper';
-                wrapper.style.position = 'relative';
-                wrapper.style.width = '100%';
-                wrapper.style.height = '100%';
-                wrapper.style.display = 'flex';
-                wrapper.style.alignItems = 'center';
-                wrapper.style.justifyContent = 'center';
-                wrapper.style.background = '#111';
-                const loader = document.createElement('div');
-                loader.className = 'fb-loader';
-                loader.innerHTML =
-                    `<i class="fa-brands fa-facebook"></i><span>جاري تحميل الفيديو...</span>`;
-                wrapper.appendChild(loader);
-                div.appendChild(wrapper);
-                const badge = document.createElement('div');
-                badge.className = 'media-badge';
-                badge.innerHTML = '<i class="fa-brands fa-facebook"></i> فيسبوك';
-                div.appendChild(badge);
-                try {
+            try {
+                if (isFb) {
                     const embedHtml = await fetchFacebookEmbed(item.src);
-                    wrapper.innerHTML = '';
+                    iframeWrapper.style.display = 'block';
                     const tempDiv = document.createElement('div');
                     tempDiv.innerHTML = embedHtml;
-                    const iframe = tempDiv.querySelector('iframe');
-                    if (iframe) {
-                        iframe.style.width = '100%';
-                        iframe.style.height = '100%';
-                        iframe.style.border = 'none';
-                        iframe.allowFullscreen = true;
-                        wrapper.appendChild(iframe);
-                    } else {
-                        wrapper.innerHTML =
-                            `<div style="color:var(--text-muted); padding:20px; text-align:center;">تعذر تحميل الفيديو</div>`;
-                    }
-                } catch (e) {
-                    wrapper.innerHTML =
-                        `<div style="color:var(--text-muted); padding:20px; text-align:center;">حدث خطأ في تحميل الفيديو</div>`;
-                }
-                div.addEventListener('click', () => openLightbox(index));
-            } else if (item.type === 'video') {
-                const wrapper = document.createElement('div');
-                wrapper.className = 'video-wrapper';
-                const video = document.createElement('video');
-                video.src = item.src;
-                video.muted = true;
-                video.playsInline = true;
-                video.preload = 'metadata';
-                video.setAttribute('playsinline', '');
-                const icon = document.createElement('div');
-                icon.className = 'play-icon';
-                icon.innerHTML = '<i class="fa-solid fa-play"></i>';
-                wrapper.appendChild(video);
-                wrapper.appendChild(icon);
-                div.appendChild(wrapper);
-                div.addEventListener('click', () => openLightbox(index));
-            } else {
-                const img = document.createElement('img');
-                img.src = item.src;
-                img.alt = `صورة ${index+1}`;
-                img.loading = 'lazy';
-                img.decoding = 'async';
-                img.onerror = function() {
-                    this.style.display = 'none';
-                    const placeholder = document.createElement('div');
-                    placeholder.className = 'img-placeholder';
-                    placeholder.textContent = 'الصورة غير متوفرة';
-                    this.parentNode.appendChild(placeholder);
-                };
-                div.appendChild(img);
-                div.addEventListener('click', () => openLightbox(index));
-            }
-            grid.appendChild(div);
-        }
-    }
-
-    let currentLightboxIndex = 0;
-    let lightboxItems = [];
-
-    async function openLightbox(index) {
-        lightboxItems = getAllItems();
-        if (!lightboxItems.length) return;
-        currentLightboxIndex = Math.min(Math.max(index, 0), lightboxItems.length - 1);
-        document.getElementById('lightboxOverlay').classList.add('active');
-        document.body.style.overflow = 'hidden';
-        await showLightboxItem(currentLightboxIndex);
-    }
-
-    function closeLightbox() {
-        document.getElementById('lightboxOverlay').classList.remove('active');
-        document.body.style.overflow = '';
-        const video = document.getElementById('lbVideo');
-        if (video) { video.pause();
-            video.currentTime = 0; }
-        const iframe = document.getElementById('lbIframe');
-        if (iframe) iframe.src = '';
-    }
-
-    async function showLightboxItem(index) {
-        const img = document.getElementById('lbImage');
-        const video = document.getElementById('lbVideo');
-        const iframeWrapper = document.getElementById('lbIframeWrapper');
-        const iframe = document.getElementById('lbIframe');
-        const loader = document.getElementById('lbLoader');
-        const counter = document.getElementById('lbCounter');
-        const item = lightboxItems[index] || { type: 'image', src: '' };
-
-        img.style.display = 'none';
-        video.style.display = 'none';
-        iframeWrapper.style.display = 'none';
-        loader.style.display = 'flex';
-
-        const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
-
-        try {
-            if (isFb) {
-                const embedHtml = await fetchFacebookEmbed(item.src);
-                iframeWrapper.style.display = 'block';
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = embedHtml;
-                const fbIframe = tempDiv.querySelector('iframe');
-                if (fbIframe) {
-                    iframe.src = fbIframe.src;
-                    iframe.allowFullscreen = true;
-                } else {
-                    iframe.src =
-                        `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(item.src)}&show_text=0&width=560`;
-                }
-                loader.style.display = 'none';
-                iframe.onload = () => { loader.style.display = 'none'; };
-                setTimeout(() => { loader.style.display = 'none'; }, 4000);
-            } else if (item.type === 'video') {
-                video.style.display = 'block';
-                video.src = item.src;
-                video.onloadeddata = function() { loader.style.display = 'none';
-                    video.play().catch(() => {}); };
-                video.onerror = function() { loader.style.display = 'none'; };
-                video.load();
-            } else {
-                img.style.display = 'block';
-                img.src = item.src;
-                img.onload = function() { loader.style.display = 'none'; };
-                img.onerror = function() {
+                    const fbIframe = tempDiv.querySelector('iframe');
+                    if (fbIframe) { iframe.src = fbIframe.src;
+                        iframe.allowFullscreen = true; } else { iframe.src =
+                            `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(item.src)}&show_text=0&width=560`; }
                     loader.style.display = 'none';
-                    img.style.display = 'none';
-                    const parent = document.getElementById('lbContent');
-                    const div = document.createElement('div');
-                    div.className = 'lb-error-placeholder';
-                    div.style.cssText =
-                        'color:var(--text-muted); font-size:1.2rem; padding:40px; text-align:center; background:rgba(0,0,0,0.5); border-radius:12px;';
-                    div.textContent = 'الصورة غير متوفرة';
-                    parent.appendChild(div);
-                };
-            }
-        } catch (e) {
-            loader.style.display = 'none';
-            const parent = document.getElementById('lbContent');
-            const div = document.createElement('div');
-            div.className = 'lb-error-placeholder';
-            div.style.cssText =
-                'color:var(--text-muted); font-size:1.2rem; padding:40px; text-align:center; background:rgba(0,0,0,0.5); border-radius:12px;';
-            div.textContent = 'تعذر تحميل المحتوى';
-            parent.appendChild(div);
-        }
-
-        counter.textContent = `${index+1} / ${lightboxItems.length}`;
-        document.getElementById('lbPrev').style.visibility = index > 0 ? 'visible' : 'hidden';
-        document.getElementById('lbNext').style.visibility = index < lightboxItems.length - 1 ? 'visible' : 'hidden';
-    }
-
-    document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    document.getElementById('lbPrev').addEventListener('click', () => {
-        if (currentLightboxIndex > 0) { currentLightboxIndex--;
-            showLightboxItem(currentLightboxIndex); }
-    });
-    document.getElementById('lbNext').addEventListener('click', () => {
-        if (currentLightboxIndex < lightboxItems.length - 1) { currentLightboxIndex++;
-            showLightboxItem(currentLightboxIndex); }
-    });
-    document.getElementById('lightboxOverlay').addEventListener('click', function(e) {
-        if (e.target === this) closeLightbox();
-    });
-    document.addEventListener('keydown', function(e) {
-        const overlay = document.getElementById('lightboxOverlay');
-        if (!overlay.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') { e.preventDefault();
-            document.getElementById('lbNext').click(); }
-        if (e.key === 'ArrowLeft') { e.preventDefault();
-            document.getElementById('lbPrev').click(); }
-    });
-
-    // ===== إدارة المحتوى (مودال) =====
-    const manageModal = document.getElementById('manageModal');
-    const openBtn = document.getElementById('openManageBtn');
-    const closeModalBtn = document.getElementById('modalClose');
-    const fileInput = document.getElementById('fileInput');
-    const uploadArea = document.getElementById('uploadArea');
-    const previewGrid = document.getElementById('modalPreviewGrid');
-    const saveBtn = document.getElementById('saveImagesBtn');
-    const storageInfo = document.getElementById('storageInfo');
-    const mediaTypeSelect = document.getElementById('mediaTypeSelect');
-    const mediaUrlInput = document.getElementById('mediaUrlInput');
-    const addLinkBtn = document.getElementById('addLinkBtn');
-    let pendingItems = [];
-
-    openBtn.addEventListener('click', () => {
-        manageModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        renderModalPreview();
-    });
-
-    function closeModal() {
-        manageModal.classList.remove('active');
-        document.body.style.overflow = '';
-        pendingItems = [];
-        fileInput.value = '';
-        renderModalPreview();
-    }
-    closeModalBtn.addEventListener('click', closeModal);
-    manageModal.addEventListener('click', function(e) {
-        if (e.target === this) closeModal();
-    });
-
-    uploadArea.addEventListener('click', () => fileInput.click());
-    uploadArea.addEventListener('dragover', (e) => { e.preventDefault();
-        uploadArea.style.borderColor = 'var(--gold)'; });
-    uploadArea.addEventListener('dragleave', () => { uploadArea.style.borderColor = 'rgba(196,154,108,0.3)'; });
-    uploadArea.addEventListener('drop', (e) => {
-        e.preventDefault();
-        uploadArea.style.borderColor = 'rgba(196,154,108,0.3)';
-        if (e.dataTransfer.files.length) { handleFiles(e.dataTransfer.files); }
-    });
-    fileInput.addEventListener('change', function() {
-        if (this.files.length) { handleFiles(this.files);
-            this.value = ''; }
-    });
-
-    function handleFiles(files) {
-        for (const file of files) {
-            if (!file.type.startsWith('image/')) continue;
-            compressImage(file, 600, 0.3, (dataUrl) => {
-                pendingItems.push({ type: 'image', src: dataUrl, platform: 'upload' });
-                renderModalPreview();
-            });
-        }
-    }
-
-    function compressImage(file, maxWidth, quality, callback) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = new Image();
-            img.onload = function() {
-                const canvas = document.createElement('canvas');
-                let width = img.width,
-                    height = img.height;
-                if (width > maxWidth) {
-                    height = (maxWidth / width) * height;
-                    width = maxWidth;
-                }
-                canvas.width = width;
-                canvas.height = height;
-                const ctx = canvas.getContext('2d');
-                ctx.drawImage(img, 0, 0, width, height);
-                try { callback(canvas.toDataURL('image/webp', quality)); } catch { callback(canvas.toDataURL(
-                    'image/jpeg', quality)); }
-            };
-            img.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-
-    addLinkBtn.addEventListener('click', function() {
-        const url = mediaUrlInput.value.trim();
-        if (!url) { alert('الرجاء إدخال رابط صحيح'); return; }
-        let type = mediaTypeSelect.value;
-        let platform = 'direct';
-        if (isFacebookUrl(url)) { type = 'video';
-            platform = 'facebook'; } else if (type === 'facebook') { alert('الرابط ليس من فيسبوك! سيتم إضافته كفيديو عادي.');
-            type = 'video'; }
-        pendingItems.push({ type, src: url, platform });
-        mediaUrlInput.value = '';
-        renderModalPreview();
-    });
-
-    function renderModalPreview() {
-        const stored = getStoredItems();
-        const allPreview = [...stored, ...pendingItems];
-        previewGrid.innerHTML = '';
-        allPreview.forEach((item, idx) => {
-            const div = document.createElement('div');
-            div.className = 'preview-item';
-            const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
-            if (isFb) {
-                const icon = document.createElement('i');
-                icon.className = 'fa-brands fa-facebook';
-                icon.style.cssText = 'font-size:3rem; color:#1877f2;';
-                div.appendChild(icon);
-                const badge = document.createElement('span');
-                badge.className = 'fb-badge';
-                badge.textContent = 'فيسبوك';
-                div.appendChild(badge);
-            } else if (item.type === 'video') {
-                const video = document.createElement('video');
-                video.src = item.src;
-                video.muted = true;
-                video.playsInline = true;
-                video.preload = 'metadata';
-                video.style.width = '100%';
-                video.style.height = '100%';
-                video.style.objectFit = 'cover';
-                div.appendChild(video);
-            } else {
-                const img = document.createElement('img');
-                img.src = item.src;
-                img.alt = `ميديا ${idx+1}`;
-                img.loading = 'lazy';
-                div.appendChild(img);
-            }
-            const tag = document.createElement('span');
-            tag.className = 'media-type';
-            if (isFb) tag.textContent = '📘 فيسبوك';
-            else if (item.type === 'video') tag.textContent = '🎬 فيديو';
-            else tag.textContent = '🖼️ صورة';
-            div.appendChild(tag);
-            const delBtn = document.createElement('button');
-            delBtn.className = 'del-btn';
-            delBtn.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
-            delBtn.title = 'حذف';
-            delBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                if (idx < stored.length) {
-                    const newStored = stored.filter((_, i) => i !== idx);
-                    setStoredItems(newStored);
-                    renderModalPreview();
-                    renderGallery();
-                    updateStorageInfo();
+                    iframe.onload = () => { loader.style.display = 'none'; };
+                    setTimeout(() => { loader.style.display = 'none'; }, 4000);
+                } else if (item.type === 'video') {
+                    video.style.display = 'block';
+                    video.src = item.src;
+                    video.onloadeddata = function() { loader.style.display = 'none';
+                        video.play().catch(() => {}); };
+                    video.onerror = function() { loader.style.display = 'none'; };
+                    video.load();
                 } else {
-                    const pendingIdx = idx - stored.length;
-                    pendingItems.splice(pendingIdx, 1);
-                    renderModalPreview();
+                    img.style.display = 'block';
+                    img.src = item.src;
+                    img.onload = function() { loader.style.display = 'none'; };
+                    img.onerror = function() {
+                        loader.style.display = 'none';
+                        img.style.display = 'none';
+                        const parent = document.getElementById('lbContent');
+                        const div = document.createElement('div');
+                        div.className = 'lb-error-placeholder';
+                        div.style.cssText =
+                            'color:var(--text-muted); font-size:1.2rem; padding:40px; text-align:center; background:rgba(0,0,0,0.5); border-radius:12px;';
+                        div.textContent = 'الصورة غير متوفرة';
+                        parent.appendChild(div);
+                    };
                 }
-            });
-            div.appendChild(delBtn);
-            previewGrid.appendChild(div);
-        });
-        updateStorageInfo();
-    }
-
-    function updateStorageInfo() {
-        const stored = getStoredItems();
-        storageInfo.textContent = `(${stored.length} عنصر مخزن)`;
-    }
-
-    saveBtn.addEventListener('click', function() {
-        if (!pendingItems.length) return;
-        const stored = getStoredItems();
-        const merged = [...stored, ...pendingItems];
-        setStoredItems(merged);
-        pendingItems = [];
-        renderModalPreview();
-        renderGallery();
-    });
-
-    window.addEventListener('storage', function(e) {
-        if (e.key === STORAGE_KEY) { renderGallery(); if (manageModal.classList.contains('active')) { renderModalPreview(); } }
-    });
-
-    // ===== هامبرغر =====
-    const hamburger = document.getElementById('hamburgerBtn');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('open');
-        const spans = this.querySelectorAll('span');
-        if (navLinks.classList.contains('open')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-        } else {
-            spans[0].style.transform = '';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = '';
+            } catch (e) {
+                loader.style.display = 'none';
+                const parent = document.getElementById('lbContent');
+                const div = document.createElement('div');
+                div.className = 'lb-error-placeholder';
+                div.style.cssText =
+                    'color:var(--text-muted); font-size:1.2rem; padding:40px; text-align:center; background:rgba(0,0,0,0.5); border-radius:12px;';
+                div.textContent = 'تعذر تحميل المحتوى';
+                parent.appendChild(div);
+            }
+            counter.textContent = `${index+1} / ${lightboxItems.length}`;
+            document.getElementById('lbPrev').style.visibility = index > 0 ? 'visible' : 'hidden';
+            document.getElementById('lbNext').style.visibility = index < lightboxItems.length - 1 ? 'visible' : 'hidden';
         }
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            hamburger.querySelectorAll('span').forEach(s => { s.style.transform = '';
-                s.style.opacity = '1'; });
+
+        document.getElementById('lbClose').addEventListener('click', closeLightbox);
+        document.getElementById('lbPrev').addEventListener('click', () => { if (currentLightboxIndex > 0) { currentLightboxIndex--;
+                showLightboxItem(currentLightboxIndex); } });
+        document.getElementById('lbNext').addEventListener('click', () => { if (currentLightboxIndex < lightboxItems.length -
+                1) { currentLightboxIndex++;
+                showLightboxItem(currentLightboxIndex); } });
+        document.getElementById('lightboxOverlay').addEventListener('click', function(e) { if (e.target === this)
+                closeLightbox(); });
+        document.addEventListener('keydown', function(e) {
+            const overlay = document.getElementById('lightboxOverlay');
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') { e.preventDefault();
+                document.getElementById('lbNext').click(); }
+            if (e.key === 'ArrowLeft') { e.preventDefault();
+                document.getElementById('lbPrev').click(); }
         });
-    });
 
-    // ===== تهيئة الصفحة =====
-    document.addEventListener('DOMContentLoaded', function() {
-        buildHeroSlider();
-        renderGallery();
-        updateStorageInfo();
+        // ===== MODAL LOGIC =====
+        const manageModal = document.getElementById('manageModal');
+        const openBtn = document.getElementById('openManageBtn');
+        const closeModalBtn = document.getElementById('modalClose');
+        const fileInput = document.getElementById('fileInput');
+        const uploadArea = document.getElementById('uploadArea');
+        const previewGrid = document.getElementById('modalPreviewGrid');
+        const saveBtn = document.getElementById('saveImagesBtn');
+        const storageInfo = document.getElementById('storageInfo');
+        const mediaTypeSelect = document.getElementById('mediaTypeSelect');
+        const mediaUrlInput = document.getElementById('mediaUrlInput');
+        const addLinkBtn = document.getElementById('addLinkBtn');
+        let pendingItems = [];
 
-        const telLink = document.querySelector('a[href^="tel:"]');
-        if (telLink) telLink.href = `tel:${CONTACT_PHONE_RAW}`;
-        const mailLink = document.querySelector('a[href^="mailto:"]');
-        if (mailLink) mailLink.href = `mailto:${CONTACT_EMAIL}`;
-        // تحديث جميع روابط واتساب
-        const waLinks = document.querySelectorAll('.whatsapp-float, .whatsapp-card a');
-        waLinks.forEach(link => {
-            link.href =
-                `https://wa.me/${CONTACT_PHONE_RAW}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
+        openBtn.addEventListener('click', () => { manageModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            renderModalPreview(); });
+
+        function closeModal() { manageModal.classList.remove('active');
+            document.body.style.overflow = '';
+            pendingItems = [];
+            fileInput.value = '';
+            renderModalPreview(); }
+        closeModalBtn.addEventListener('click', closeModal);
+        manageModal.addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', (e) => { e.preventDefault();
+            uploadArea.style.borderColor = 'var(--gold)'; });
+        uploadArea.addEventListener('dragleave', () => { uploadArea.style.borderColor = 'rgba(196,154,108,0.3)'; });
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = 'rgba(196,154,108,0.3)';
+            if (e.dataTransfer.files.length) { handleFiles(e.dataTransfer.files); }
         });
-        const mapIframe = document.querySelector('.map-wrapper iframe');
-        if (mapIframe) mapIframe.src = MAP_EMBED;
-        const fbLink = document.querySelector('.contact-card a[href*="facebook"]');
-        if (fbLink) fbLink.href = CONTACT_FB;
-        const igLink = document.querySelector('.contact-card a[href*="instagram"]');
-        if (igLink) igLink.href = CONTACT_IG;
-    });
+        fileInput.addEventListener('change', function() { if (this.files.length) { handleFiles(this.files);
+                this.value = ''; } });
 
-    console.log('✅ تم تهيئة الموقع مع صور صحيحة للجنسين');
-</script>
+        function handleFiles(files) {
+            for (const file of files) {
+                if (!file.type.startsWith('image/')) continue;
+                compressImage(file, 600, 0.3, (dataUrl) => {
+                    pendingItems.push({ type: 'image', src: dataUrl, platform: 'upload' });
+                    renderModalPreview();
+                });
+            }
+        }
+
+        function compressImage(file, maxWidth, quality, callback) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    let width = img.width,
+                        height = img.height;
+                    if (width > maxWidth) { height = (maxWidth / width) * height;
+                        width = maxWidth; }
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    try { callback(canvas.toDataURL('image/webp', quality)); } catch { callback(canvas.toDataURL(
+                            'image/jpeg', quality)); }
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        addLinkBtn.addEventListener('click', function() {
+            const url = mediaUrlInput.value.trim();
+            if (!url) { alert('الرجاء إدخال رابط صحيح'); return; }
+            let type = mediaTypeSelect.value;
+            let platform = 'direct';
+            if (isFacebookUrl(url)) { type = 'video';
+                platform = 'facebook'; } else if (type === 'facebook') { alert('الرابط ليس من فيسبوك! سيتم إضافته كفيديو عادي.');
+                type = 'video'; }
+            pendingItems.push({ type, src: url, platform });
+            mediaUrlInput.value = '';
+            renderModalPreview();
+        });
+
+        function renderModalPreview() {
+            const stored = getStoredItems();
+            const allPreview = [...stored, ...pendingItems];
+            previewGrid.innerHTML = '';
+            allPreview.forEach((item, idx) => {
+                const div = document.createElement('div');
+                div.className = 'preview-item';
+                const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
+                if (isFb) {
+                    const icon = document.createElement('i');
+                    icon.className = 'fa-brands fa-facebook';
+                    icon.style.cssText = 'font-size:3rem; color:#1877f2;';
+                    div.appendChild(icon);
+                    const badge = document.createElement('span');
+                    badge.className = 'fb-badge';
+                    badge.textContent = 'فيسبوك';
+                    div.appendChild(badge);
+                } else if (item.type === 'video') {
+                    const video = document.createElement('video');
+                    video.src = item.src;
+                    video.muted = true;
+                    video.playsInline = true;
+                    video.preload = 'metadata';
+                    video.style.cssText = 'width:100%;height:100%;object-fit:cover;';
+                    div.appendChild(video);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = item.src;
+                    img.alt = `ميديا ${idx+1}`;
+                    img.loading = 'lazy';
+                    div.appendChild(img);
+                }
+                const tag = document.createElement('span');
+                tag.className = 'media-type';
+                if (isFb) tag.textContent = '📘 فيسبوك';
+                else if (item.type === 'video') tag.textContent = '🎬 فيديو';
+                else tag.textContent = '🖼️ صورة';
+                div.appendChild(tag);
+                const delBtn = document.createElement('button');
+                delBtn.className = 'del-btn';
+                delBtn.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
+                delBtn.title = 'حذف';
+                delBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (idx < stored.length) {
+                        const newStored = stored.filter((_, i) => i !== idx);
+                        setStoredItems(newStored);
+                        renderModalPreview();
+                        renderGallery();
+                        updateStorageInfo();
+                    } else {
+                        const pendingIdx = idx - stored.length;
+                        pendingItems.splice(pendingIdx, 1);
+                        renderModalPreview();
+                    }
+                });
+                div.appendChild(delBtn);
+                previewGrid.appendChild(div);
+            });
+            updateStorageInfo();
+        }
+
+        function updateStorageInfo() {
+            const stored = getStoredItems();
+            storageInfo.textContent = `(${stored.length} عنصر مخزن)`;
+        }
+
+        saveBtn.addEventListener('click', function() {
+            if (!pendingItems.length) return;
+            const stored = getStoredItems();
+            const merged = [...stored, ...pendingItems];
+            setStoredItems(merged);
+            pendingItems = [];
+            renderModalPreview();
+            renderGallery();
+        });
+
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) { renderGallery(); if (manageModal.classList.contains('active')) { renderModalPreview(); } }
+        });
+
+        // ===== HAMBURGER =====
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+            const spans = this.querySelectorAll('span');
+            if (navLinks.classList.contains('open')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = '';
+            }
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                hamburger.querySelectorAll('span').forEach(s => { s.style.transform = '';
+                    s.style.opacity = '1'; });
+            });
+        });
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            buildHeroSlider();
+            renderGallery();
+            updateStorageInfo();
+
+            const telLink = document.querySelector('a[href^="tel:"]');
+            if (telLink) telLink.href = `tel:${CONTACT_PHONE_RAW}`;
+            const mailLink = document.querySelector('a[href^="mailto:"]');
+            if (mailLink) mailLink.href = `mailto:${CONTACT_EMAIL}`;
+            const waLinks = document.querySelectorAll('.whatsapp-float, .whatsapp-card a');
+            waLinks.forEach(link => {
+                link.href = `https://wa.me/${CONTACT_PHONE_RAW}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
+            });
+            const mapIframe = document.querySelector('.map-wrapper iframe');
+            if (mapIframe) mapIframe.src = MAP_EMBED;
+            const fbLink = document.querySelector('.contact-card a[href*="facebook"]');
+            if (fbLink) fbLink.href = CONTACT_FB;
+            const igLink = document.querySelector('.contact-card a[href*="instagram"]');
+            if (igLink) igLink.href = CONTACT_IG;
+        });
+
+        console.log('✅ الموقع جاهز تماماً مع الصور الأساسية');
+    </script>
 </body>
     </html>
