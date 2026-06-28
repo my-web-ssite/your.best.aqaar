@@ -247,9 +247,6 @@
             text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
             margin-bottom: 8px;
         }
-        .hero-slider .slide-overlay h1 span {
-            color: var(--gold);
-        }
         .hero-slider .slide-overlay p {
             font-size: 1.4rem;
             color: var(--text-light);
@@ -360,6 +357,84 @@
             to {
                 transform: rotate(360deg);
             }
+        }
+
+        /* ===== TESTIMONIALS (آراء العملاء) ===== */
+        .testimonials-section {
+            padding: 70px 0;
+            background: var(--bg-card);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: var(--bg-dark);
+            border-radius: var(--radius);
+            padding: 28px 22px;
+            border: 1px solid rgba(196, 154, 108, 0.15);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .testimonial-card:hover {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-4px);
+        }
+        .testimonial-card .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--gold);
+            margin-bottom: 16px;
+            flex-shrink: 0;
+        }
+        .testimonial-card .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .testimonial-card .name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .testimonial-card .title {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .testimonial-card .quote {
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            font-style: italic;
+            position: relative;
+            padding: 0 10px;
+        }
+        .testimonial-card .quote::before {
+            content: '\201C';
+            font-size: 2.5rem;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            right: -8px;
+            top: -10px;
+        }
+        .testimonial-card .stars {
+            color: var(--gold);
+            margin-top: 12px;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+        }
+        .testimonial-card .stars i {
+            margin: 0 2px;
         }
 
         /* ===== LIGHTBOX ===== */
@@ -854,6 +929,9 @@
                 grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
                 gap: 12px;
             }
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
             .contact-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -888,6 +966,9 @@
             .hero-slider .slide-overlay p {
                 font-size: 0.9rem;
             }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -921,7 +1002,7 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero" class="active">الرئيسية</a></li>
             <li><a href="#gallery">الشقق</a></li>
-            <li><a href="#gallery">المعرض</a></li>
+            <li><a href="#testimonials">آراء</a></li>
             <li><a href="#contact">اتصال</a></li>
         </ul>
         <div class="nav-actions">
@@ -948,6 +1029,126 @@
     <section class="gallery-section container" id="gallery">
         <h2 class="section-title">معرض الشقق التمليك</h2>
         <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section container" id="testimonials">
+        <h2 class="section-title">آراء عملائنا الكرام</h2>
+        <div class="testimonials-grid">
+            <!-- العميل 1 -->
+            <div class="testimonial-card">
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=1" alt="أ. محمد السالمي" loading="lazy">
+                </div>
+                <div class="name">أ. محمد السالمي</div>
+                <div class="title">مستثمر عقاري</div>
+                <div class="quote">
+                    "تعامل راقٍ وإنجاز في وقت قياسي. الشقة التي حصلت عليها تفوقت على كل توقعاتي من حيث الموقع والإطلالة الخلابة. أنصح كل من يبحث عن الجودة والثقة."
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <!-- العميل 2 -->
+            <div class="testimonial-card">
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=2" alt="د. فاطمة الحارثي" loading="lazy">
+                </div>
+                <div class="name">د. فاطمة الحارثي</div>
+                <div class="title">استشارية أسرية</div>
+                <div class="quote">
+                    "مصداقية واحترافية عالية منذ أول لقاء. وفرت لنا المؤسسة أفضل خيارات التمليك التي تناسب احتياجات عائلتنا. نشكرهم على هذا المجهود الكبير."
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <!-- العميل 3 -->
+            <div class="testimonial-card">
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=3" alt="م. عبدالله النعيمي" loading="lazy">
+                </div>
+                <div class="name">م. عبدالله النعيمي</div>
+                <div class="title">مهندس معماري</div>
+                <div class="quote">
+                    "خبرة تلتقي بالإبداع بكل معنى الكلمة. التصميم الداخلي والديكور يخطف الأنفاس، وجودة التشطيبات تفوق الخيال. فخور بأنني اخترت عقارك الأفضل."
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <!-- العميل 4 -->
+            <div class="testimonial-card">
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=4" alt="السيدة منى الشامسي" loading="lazy">
+                </div>
+                <div class="name">السيدة منى الشامسي</div>
+                <div class="title">ربة منزل</div>
+                <div class="quote">
+                    "من أول زيارة شعرت بالراحة والطمأنينة. الفريق كان لطيفاً ومحترفاً، وساعدونا في اختيار منزل الأحلام لعائلتنا. الآن نحن في منزلنا الجديد ونحن سعداء جداً."
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <!-- العميل 5 -->
+            <div class="testimonial-card">
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="اللواء طارق الحمادي" loading="lazy">
+                </div>
+                <div class="name">اللواء طارق الحمادي</div>
+                <div class="title">متقاعد</div>
+                <div class="quote">
+                    "استثمار آمن وموقع استراتيجي بامتياز. أنصح الجميع بالتعامل مع مؤسسة عقارك الأفضل، فهم مثال للشركة التي تفي بوعودها وتقدم قيمة حقيقية لعملائها."
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <!-- العميل 6 -->
+            <div class="testimonial-card">
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=6" alt="شركة ريتاج للتطوير" loading="lazy">
+                </div>
+                <div class="name">شركة ريتاج للتطوير</div>
+                <div class="title">شريك أعمال</div>
+                <div class="quote">
+                    "شراكة ناجحة وجودة لا تُضاهى. أنجزوا لنا أكثر من 20 وحدة سكنية بجودة عالية وفي وقت قياسي. نخبة من أفضل الكوادر في مجال التطوير العقاري."
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
@@ -1028,7 +1229,7 @@ aria-label="واتساب">
         <h2><i class="fa-regular fa-images"></i> إدارة المحتوى المرئي</h2>
         <div class="upload-area" id="uploadArea">
             <i class="fa-regular fa-cloud-arrow-up"></i>
-            <p>اضغط هنا لرفع صور من جهازك (اختياري)</p>
+            <p>اضغط هنا لرفع صور من جهازك (سيتم ضغطها تلقائياً)</p>
             <input type="file" id="fileInput" accept="image/*" multiple />
         </div>
         <div class="link-input-group">
@@ -1061,13 +1262,12 @@ aria-label="واتساب">
 </script>
 <script>
     /* ============================================================
-       البيانات الصحيحة (تم التدقيق والتصحيح)
+       البيانات الصحيحة
        ============================================================ */
     const SITE_NAME = 'مؤسسة عقارك الأفضل للشقق التمليك';
     const HERO_TITLE = 'مؤسسة عقارك الأفضل';
     const HERO_SUB = 'شقق تمليك فاخرة في قلب صنعاء';
 
-    // بيانات التواصل الصحيحة
     const CONTACT_PHONE_RAW = '967776259154';
     const CONTACT_PHONE_DISPLAY = '+967 776 259 154';
     const CONTACT_EMAIL = 'info@aqaarbest.com';
@@ -1077,7 +1277,6 @@ aria-label="واتساب">
     const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019';
     const WHATSAPP_MSG = 'مرحباً، أود الاستفسار عن الشقق التمليك في مؤسسة عقارك الأفضل';
 
-    // ===== الصور الأساسية (موجودة في مجلد الموقع) =====
     const BASE_IMAGES = Array.from({ length: 19 }, (_, i) => (i + 1) + 'IMG.jpg');
     const SLIDER_ORDER = [
         '19IMG.jpg', '2IMG.jpg', '4IMG.jpg', '10IMG.jpg',
@@ -1088,32 +1287,22 @@ aria-label="واتساب">
     const STORAGE_KEY = 'gallery_items';
     const oembedCache = new Map();
 
-    // ===== دوال مساعدة =====
     function isFacebookUrl(url) {
         return url && (url.includes('facebook.com') || url.includes('fb.com'));
     }
 
     async function fetchFacebookEmbed(url) {
-        if (oembedCache.has(url)) {
-            return oembedCache.get(url);
-        }
+        if (oembedCache.has(url)) return oembedCache.get(url);
         try {
-            const apiUrl =
-                `https://graph.facebook.com/v18.0/oembed_video?url=${encodeURIComponent(url)}`;
+            const apiUrl = `https://graph.facebook.com/v18.0/oembed_video?url=${encodeURIComponent(url)}`;
             const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const data = await response.json();
             if (data && data.html) {
-                const html = data.html;
-                oembedCache.set(url, html);
-                return html;
-            } else {
-                throw new Error('لم يتم العثور على كود تضمين');
-            }
+                oembedCache.set(url, data.html);
+                return data.html;
+            } else throw new Error('لم يتم العثور على كود تضمين');
         } catch (error) {
-            console.error('فشل جلب oEmbed:', error);
             const fallbackHtml =
                 `<iframe src="https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=0&width=560" allowfullscreen></iframe>`;
             oembedCache.set(url, fallbackHtml);
@@ -1121,7 +1310,6 @@ aria-label="واتساب">
         }
     }
 
-    // ===== دوال التخزين =====
     function getStoredItems() {
         try { const data = localStorage.getItem(STORAGE_KEY); return data ? JSON.parse(data) : []; } catch { return []; }
     }
@@ -1136,7 +1324,6 @@ aria-label="واتساب">
         return [...baseItems, ...stored];
     }
 
-    // ===== بناء السلايدر =====
     function buildHeroSlider() {
         const wrapper = document.querySelector('.heroSwiper .swiper-wrapper');
         if (!wrapper) return;
@@ -1164,21 +1351,17 @@ aria-label="واتساب">
         });
     }
 
-    // ===== بناء المعرض (مع oEmbed) =====
     async function renderGallery() {
         const grid = document.getElementById('galleryGrid');
         if (!grid) return;
         const items = getAllItems();
         grid.innerHTML = '';
-
         for (let index = 0; index < items.length; index++) {
             const item = items[index];
             const div = document.createElement('div');
             div.className = 'gallery-item';
             div.dataset.index = index;
-
             const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
-
             if (isFb) {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'video-wrapper';
@@ -1189,21 +1372,16 @@ aria-label="واتساب">
                 wrapper.style.alignItems = 'center';
                 wrapper.style.justifyContent = 'center';
                 wrapper.style.background = '#111';
-
                 const loader = document.createElement('div');
                 loader.className = 'fb-loader';
-                loader.innerHTML = `
-                        <i class="fa-brands fa-facebook"></i>
-                        <span>جاري تحميل الفيديو...</span>
-                    `;
+                loader.innerHTML =
+                    `<i class="fa-brands fa-facebook"></i><span>جاري تحميل الفيديو...</span>`;
                 wrapper.appendChild(loader);
                 div.appendChild(wrapper);
-
                 const badge = document.createElement('div');
                 badge.className = 'media-badge';
                 badge.innerHTML = '<i class="fa-brands fa-facebook"></i> فيسبوك';
                 div.appendChild(badge);
-
                 try {
                     const embedHtml = await fetchFacebookEmbed(item.src);
                     wrapper.innerHTML = '';
@@ -1261,7 +1439,6 @@ aria-label="واتساب">
         }
     }
 
-    // ===== Lightbox =====
     let currentLightboxIndex = 0;
     let lightboxItems = [];
 
@@ -1311,7 +1488,8 @@ aria-label="واتساب">
                     iframe.src = fbIframe.src;
                     iframe.allowFullscreen = true;
                 } else {
-                    iframe.src = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(item.src)}&show_text=0&width=560`;
+                    iframe.src =
+                        `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(item.src)}&show_text=0&width=560`;
                 }
                 loader.style.display = 'none';
                 iframe.onload = () => { loader.style.display = 'none'; };
@@ -1426,7 +1604,7 @@ aria-label="واتساب">
     function handleFiles(files) {
         for (const file of files) {
             if (!file.type.startsWith('image/')) continue;
-            compressImage(file, 800, 0.6, (dataUrl) => {
+            compressImage(file, 600, 0.3, (dataUrl) => {
                 pendingItems.push({ type: 'image', src: dataUrl, platform: 'upload' });
                 renderModalPreview();
             });
@@ -1441,8 +1619,10 @@ aria-label="واتساب">
                 const canvas = document.createElement('canvas');
                 let width = img.width,
                     height = img.height;
-                if (width > maxWidth) { height = (maxWidth / width) * height;
-                    width = maxWidth; }
+                if (width > maxWidth) {
+                    height = (maxWidth / width) * height;
+                    width = maxWidth;
+                }
                 canvas.width = width;
                 canvas.height = height;
                 const ctx = canvas.getContext('2d');
@@ -1597,7 +1777,7 @@ aria-label="واتساب">
         if (igLink) igLink.href = CONTACT_IG;
     });
 
-    console.log('✅ تم تهيئة الموقع مع النصوص الصحيحة لمؤسسة عقارك الأفضل');
+    console.log('✅ تم تهيئة الموقع مع آراء العملاء');
 </script>
 </body>
     </html>
