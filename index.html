@@ -626,7 +626,7 @@
             filter: grayscale(0.2) invert(0.05);
         }
 
-        /* ===== WHATSAPP FLOAT ===== */
+        /* ===== WHATSAPP FLOAT (راقي وواضح مع نبض) ===== */
         .whatsapp-float {
             position: fixed;
             bottom: 28px;
@@ -634,20 +634,71 @@
             z-index: 999;
             background: #25d366;
             color: #fff;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.4rem;
-            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+            font-size: 2.6rem;
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
             transition: var(--transition);
             text-decoration: none;
+            border: 2px solid var(--gold);
+            animation: pulse-whatsapp 2s infinite;
         }
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
+            transform: scale(1.12);
+            box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7);
+            animation-play-state: paused;
+        }
+        /* تأثير نبض راقي */
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        /* ظهور النص عند التمرير */
+        .whatsapp-float::after {
+            content: "تواصل واتساب";
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--gold);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            border: 1px solid var(--gold);
+            backdrop-filter: blur(4px);
+        }
+        .whatsapp-float:hover::after {
+            opacity: 1;
+            visibility: visible;
+            bottom: -45px;
+        }
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                font-size: 2.2rem;
+                bottom: 18px;
+                left: 18px;
+            }
+            .whatsapp-float::after {
+                display: none;
+            }
         }
 
         /* ===== MODAL ===== */
@@ -975,13 +1026,6 @@
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             }
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 2rem;
-                bottom: 18px;
-                left: 18px;
-            }
         }
         .text-gold {
             color: var(--gold);
@@ -1038,7 +1082,7 @@
             <!-- العميل 1: رجل -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=1" alt="أ. محمد السالمي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=1&v=2" alt="أ. محمد السالمي" loading="lazy">
                 </div>
                 <div class="name">أ. محمد السالمي</div>
                 <div class="title">مستثمر عقاري</div>
@@ -1057,7 +1101,7 @@
             <!-- العميل 2: امرأة -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=2" alt="د. فاطمة الحارثي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=2&v=2" alt="د. فاطمة الحارثي" loading="lazy">
                 </div>
                 <div class="name">د. فاطمة الحارثي</div>
                 <div class="title">استشارية أسرية</div>
@@ -1076,7 +1120,7 @@
             <!-- العميل 3: رجل -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=3" alt="م. عبدالله النعيمي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=3&v=2" alt="م. عبدالله النعيمي" loading="lazy">
                 </div>
                 <div class="name">م. عبدالله النعيمي</div>
                 <div class="title">مهندس معماري</div>
@@ -1092,10 +1136,10 @@
                 </div>
             </div>
 
-            <!-- العميل 4: امرأة -->
+            <!-- العميل 4: امرأة (السيدة منى) -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=4" alt="السيدة منى الشامسي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=4&v=2" alt="السيدة منى الشامسي" loading="lazy">
                 </div>
                 <div class="name">السيدة منى الشامسي</div>
                 <div class="title">ربة منزل</div>
@@ -1111,10 +1155,10 @@
                 </div>
             </div>
 
-            <!-- العميل 5: رجل -->
+            <!-- العميل 5: رجل (اللواء طارق) -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=5" alt="اللواء طارق الحمادي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=5&v=2" alt="اللواء طارق الحمادي" loading="lazy">
                 </div>
                 <div class="name">اللواء طارق الحمادي</div>
                 <div class="title">متقاعد</div>
@@ -1130,10 +1174,10 @@
                 </div>
             </div>
 
-            <!-- العميل 6: شركة (لا توجد صورة شخصية) -->
+            <!-- العميل 6: شركة -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=6" alt="شركة ريتاج للتطوير" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=6&v=2" alt="شركة ريتاج للتطوير" loading="lazy">
                 </div>
                 <div class="name">شركة ريتاج للتطوير</div>
                 <div class="title">شريك أعمال</div>
@@ -1194,12 +1238,12 @@
     </div>
 </section>
 
-<!-- ===== WHATSAPP FLOAT ===== -->
+<!-- ===== WHATSAPP FLOAT (راقي وواضح) ===== -->
 <a class="whatsapp-float"
 href="https://wa.me/967776259154?text=مرحباً،%20أود%20الاستفسار%20عن%20الشقق%20التمليك%20في%20مؤسسة%20عقارك%20الأفضل"
 target="_blank"
 rel="noopener"
-aria-label="واتساب">
+aria-label="تواصل واتساب">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -1274,7 +1318,6 @@ aria-label="واتساب">
     const CONTACT_ADDRESS = 'بيت بوس، صنعاء، اليمن';
     const CONTACT_FB = 'https://www.facebook.com/your.best.aqaar';
     const CONTACT_IG = 'https://www.instagram.com/your.best.aqaar';
-    // تم تحديث رابط الخريطة إلى الرابط الجديد
     const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019';
     const WHATSAPP_MSG = 'مرحباً، أود الاستفسار عن الشقق التمليك في مؤسسة عقارك الأفضل';
 
@@ -1345,7 +1388,7 @@ aria-label="واتساب">
         new Swiper('.heroSwiper', {
             effect: 'fade',
             fadeEffect: { crossFade: true },
-            autoplay: { delay: 4500, disableOnInteraction: false },
+            autoplay: { delay: 3000, disableOnInteraction: false }, // تغيير السرعة إلى 3 ثواني
             loop: true,
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             pagination: { el: '.swiper-pagination', clickable: true },
@@ -1778,7 +1821,7 @@ aria-label="واتساب">
         if (igLink) igLink.href = CONTACT_IG;
     });
 
-    console.log('✅ تم تهيئة الموقع مع آراء العملاء ورابط الخريطة الجديد');
+    console.log('✅ تم تهيئة الموقع مع سرعة سلايدر 3 ثواني وزر واتساب راقي');
 </script>
 </body>
     </html>
