@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>مؤسسة عقارك الأفضل للشقق التمليك</title>
+    <title>[اسم_النشاط]</title>
     <!-- Google Fonts: Tajawal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,7 +289,7 @@
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 18px;
         }
-        .gallery-grid .gallery-item {
+        .gallery-item {
             position: relative;
             border-radius: var(--radius);
             overflow: hidden;
@@ -298,18 +298,55 @@
             background: #1a1717;
             border: 1px solid rgba(196, 154, 108, 0.15);
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .gallery-grid .gallery-item:hover {
+        .gallery-item:hover {
             transform: scale(1.02);
             border-color: var(--gold);
             box-shadow: var(--shadow-gold);
         }
-        .gallery-grid .gallery-item img {
+        .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .gallery-grid .gallery-item .img-placeholder {
+        .gallery-item .video-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-item .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        .gallery-item .video-wrapper .play-icon {
+            position: absolute;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            padding: 10px 18px;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+        .gallery-item .video-wrapper:hover .play-icon {
+            color: var(--gold);
+            transform: scale(1.1);
+        }
+        .gallery-item .img-placeholder {
             width: 100%;
             height: 100%;
             display: flex;
@@ -320,6 +357,23 @@
             font-size: 0.9rem;
             text-align: center;
             padding: 10px;
+        }
+        /* تسمية الفيديو */
+        .gallery-item .media-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.65);
+            color: var(--gold);
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(196, 154, 108, 0.2);
+            backdrop-filter: blur(4px);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         /* ===== LIGHTBOX ===== */
@@ -346,13 +400,28 @@
             align-items: center;
             justify-content: center;
         }
-        .lightbox-content img {
+        .lightbox-content img,
+        .lightbox-content video {
             max-width: 100%;
             max-height: 80vh;
             border-radius: var(--radius);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
             object-fit: contain;
             background: #0b0a0a;
+        }
+        .lightbox-content .lb-iframe-wrapper {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+        .lightbox-content .lb-iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         .lightbox-content .lb-loader {
             position: absolute;
@@ -436,6 +505,17 @@
             font-size: 0.9rem;
             font-weight: 500;
             z-index: 10;
+        }
+        /* Responsive for iframe */
+        @media (max-width: 768px) {
+            .lightbox-content .lb-iframe-wrapper {
+                height: 350px;
+            }
+        }
+        @media (max-width: 480px) {
+            .lightbox-content .lb-iframe-wrapper {
+                height: 250px;
+            }
         }
 
         /* ===== CONTACT ===== */
@@ -570,7 +650,7 @@
         .modal-box .upload-area {
             border: 2px dashed rgba(196, 154, 108, 0.3);
             border-radius: var(--radius);
-            padding: 30px 20px;
+            padding: 20px;
             text-align: center;
             margin: 12px 0 20px;
             transition: var(--transition);
@@ -581,7 +661,7 @@
             background: rgba(196, 154, 108, 0.05);
         }
         .modal-box .upload-area i {
-            font-size: 2.6rem;
+            font-size: 2.2rem;
             color: var(--gold);
             margin-bottom: 8px;
         }
@@ -591,26 +671,84 @@
         .modal-box .upload-area input[type="file"] {
             display: none;
         }
+
+        .link-input-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0;
+            background: var(--bg-dark);
+            padding: 12px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(196, 154, 108, 0.15);
+        }
+        .link-input-group input {
+            flex: 1;
+            min-width: 180px;
+            padding: 10px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(196, 154, 108, 0.2);
+            background: var(--bg-input);
+            color: var(--text-light);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+        }
+        .link-input-group input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(196, 154, 108, 0.2);
+        }
+        .link-input-group select {
+            padding: 10px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(196, 154, 108, 0.2);
+            background: var(--bg-input);
+            color: var(--text-light);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            cursor: pointer;
+        }
+        .link-input-group .btn-gold {
+            padding: 10px 20px;
+        }
+        .link-input-group .fb-hint {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            width: 100%;
+            padding-right: 6px;
+            margin-top: 2px;
+        }
+        .link-input-group .fb-hint i {
+            color: #1877f2;
+            margin-left: 4px;
+        }
+
         .modal-box .preview-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
             gap: 12px;
             margin: 16px 0;
         }
-        .modal-box .preview-grid .preview-item {
+        .modal-box .preview-item {
             position: relative;
             aspect-ratio: 1/1;
             border-radius: 8px;
             overflow: hidden;
             background: #1a1717;
             border: 1px solid rgba(196, 154, 108, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .modal-box .preview-grid .preview-item img {
+        .modal-box .preview-item img,
+        .modal-box .preview-item video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .modal-box .preview-grid .preview-item .del-btn {
+        .modal-box .preview-item .del-btn {
             position: absolute;
             top: 4px;
             left: 4px;
@@ -626,10 +764,34 @@
             align-items: center;
             justify-content: center;
             transition: var(--transition);
+            z-index: 5;
         }
-        .modal-box .preview-grid .preview-item .del-btn:hover {
+        .modal-box .preview-item .del-btn:hover {
             background: #ff6b6b;
             color: #fff;
+        }
+        .modal-box .preview-item .media-type {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            background: rgba(0, 0, 0, 0.6);
+            color: var(--gold);
+            font-size: 0.6rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(196, 154, 108, 0.2);
+            white-space: nowrap;
+        }
+        .modal-box .preview-item .fb-badge {
+            background: #1877f2;
+            color: #fff;
+            font-size: 0.6rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            z-index: 5;
         }
         .modal-box .storage-actions {
             display: flex;
@@ -741,6 +903,13 @@
                 height: 38px;
                 font-size: 1.6rem;
             }
+            .link-input-group {
+                flex-direction: column;
+            }
+            .link-input-group input,
+            .link-input-group select {
+                width: 100%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -789,7 +958,6 @@
             gap: 12px;
         }
 
-        /* تخصيص إضافي لشعار المؤسسة */
         .brand-tagline {
             font-size: 0.9rem;
             color: var(--gold-light);
@@ -806,14 +974,14 @@
         <div class="logo">
             <i class="fa-solid fa-building-columns"></i>
             <div>
-                <span>مؤسسة عقارك الأفضل</span>
-                <div class="brand-tagline">للشقق التمليك</div>
+                <span>[اسم_النشاط]</span>
+                <div class="brand-tagline">[وصف_النشاط]</div>
             </div>
         </div>
 
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero" class="active">الرئيسية</a></li>
-            <li><a href="#gallery">الشقق</a></li>
+            <li><a href="#gallery">الخدمات</a></li>
             <li><a href="#gallery">المعرض</a></li>
             <li><a href="#contact">اتصال</a></li>
         </ul>
@@ -842,7 +1010,7 @@
 
     <!-- ===== GALLERY ===== -->
     <section class="gallery-section container" id="gallery">
-        <h2 class="section-title">معرض الشقق التمليك</h2>
+        <h2 class="section-title">معرض الأعمال</h2>
         <div class="gallery-grid" id="galleryGrid"></div>
     </section>
 
@@ -854,36 +1022,36 @@
                 <div class="contact-card">
                     <i class="fa-solid fa-location-dot"></i>
                     <h4>العنوان</h4>
-                    <p>شارع حدة - إيران، صنعاء، اليمن</p>
+                    <p>[عنوان_النشاط]</p>
                 </div>
                 <div class="contact-card">
                     <i class="fa-solid fa-phone"></i>
                     <h4>الهاتف</h4>
-                    <a href="tel:+9671542590776">+967 154 259 0776</a>
+                    <a href="tel:[رقم_الهاتف]">[رقم_الهاتف]</a>
                 </div>
                 <div class="contact-card">
                     <i class="fa-solid fa-envelope"></i>
                     <h4>البريد الإلكتروني</h4>
-                    <a href="mailto:info@aqaarbest.com">info@aqaarbest.com</a>
+                    <a href="mailto:[البريد_الإلكتروني]">[البريد_الإلكتروني]</a>
                 </div>
                 <div class="contact-card">
                     <i class="fa-brands fa-facebook"></i>
                     <h4>فيسبوك</h4>
-                    <a href="https://www.facebook.com/your.best.aqaar" target="_blank">تابع صفحتنا</a>
+                    <a href="[رابط_فيسبوك]" target="_blank">تابع صفحتنا</a>
                 </div>
                 <div class="contact-card">
                     <i class="fa-brands fa-instagram"></i>
                     <h4>إنستغرام</h4>
-                    <a href="#" target="_blank">@aqaarbest</a>
+                    <a href="[رابط_إنستغرام]" target="_blank">@حسابك</a>
                 </div>
             </div>
             <div class="map-wrapper">
                 <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019"
+                src="[رابط_خريطة_جوجل]"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="موقع مؤسسة عقارك الأفضل">
+                title="موقع النشاط">
             </iframe>
         </div>
     </div>
@@ -891,7 +1059,7 @@
 
 <!-- ===== WHATSAPP FLOAT ===== -->
 <a class="whatsapp-float"
-href="https://wa.me/9671542590776?text=مرحباً،%20أود%20الاستفسار%20عن%20الشقق%20التمليك%20في%20مؤسسة%20عقارك%20الأفضل"
+href="https://wa.me/[رقم_الهاتف]?text=[رسالة_واتساب_الترحيبية]"
 target="_blank"
 rel="noopener"
 aria-label="واتساب">
@@ -906,9 +1074,13 @@ aria-label="واتساب">
         <button class="lb-nav next" id="lbNext" aria-label="التالي">&#10095;</button>
         <div class="lb-loader" id="lbLoader">
             <i class="fa-solid fa-spinner"></i>
-            <span>جاري تحميل الصورة...</span>
+            <span>جاري تحميل الميديا...</span>
         </div>
         <img id="lbImage" src="" alt="صورة المعرض" style="display:none;" />
+        <video id="lbVideo" style="display:none;" controls autoplay></video>
+        <div class="lb-iframe-wrapper" id="lbIframeWrapper" style="display:none;">
+            <iframe id="lbIframe" src="" allowfullscreen></iframe>
+        </div>
         <div class="lb-counter" id="lbCounter"></div>
     </div>
 </div>
@@ -917,18 +1089,33 @@ aria-label="واتساب">
 <div class="modal-overlay" id="manageModal">
     <div class="modal-box">
         <button class="modal-close" id="modalClose" aria-label="إغلاق">&times;</button>
-        <h2><i class="fa-regular fa-images"></i> إدارة الصور</h2>
+        <h2><i class="fa-regular fa-images"></i> إدارة المحتوى المرئي</h2>
 
+        <!-- رفع الملفات (اختياري) -->
         <div class="upload-area" id="uploadArea">
             <i class="fa-regular fa-cloud-arrow-up"></i>
-            <p>اضغط هنا أو اسحب الصور للرفع</p>
+            <p>اضغط هنا لرفع صور من جهازك (اختياري)</p>
             <input type="file" id="fileInput" accept="image/*" multiple />
+        </div>
+
+        <!-- إضافة روابط - مع كشف فيسبوك تلقائي -->
+        <div class="link-input-group">
+            <select id="mediaTypeSelect">
+                <option value="image">🖼️ صورة</option>
+                <option value="video">🎬 فيديو (MP4)</option>
+                <option value="facebook">📘 فيسبوك (تلقائي)</option>
+            </select>
+            <input type="url" id="mediaUrlInput" placeholder="الصق رابط فيسبوك أو صورة أو فيديو..." />
+            <button class="btn-gold" id="addLinkBtn"><i class="fa-regular fa-plus"></i> أضف</button>
+            <div class="fb-hint">
+                <i class="fa-brands fa-facebook"></i> سيتم كشف روابط فيسبوك (Reels/فيديو) تلقائياً وتحويلها إلى مشغل احترافي.
+            </div>
         </div>
 
         <div class="preview-grid" id="modalPreviewGrid"></div>
 
         <div class="storage-actions">
-            <button class="btn-gold" id="saveImagesBtn"><i class="fa-regular fa-floppy-disk"></i> حفظ الصور</button>
+            <button class="btn-gold" id="saveImagesBtn"><i class="fa-regular fa-floppy-disk"></i> حفظ الكل</button>
             <span style="color:var(--text-muted); font-size:0.9rem; margin-right:12px;" id="storageInfo"></span>
         </div>
     </div>
@@ -936,7 +1123,7 @@ aria-label="واتساب">
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
-    &copy; 2026 مؤسسة عقارك الأفضل للشقق التمليك - جميع الحقوق محفوظة
+    &copy; 2026 [اسم_النشاط] - جميع الحقوق محفوظة
 </footer>
 
 <!-- ===== SCRIPTS ===== -->
@@ -944,71 +1131,67 @@ aria-label="واتساب">
 </script>
 <script>
     /* ============================================================
-       البيانات المخصصة لمؤسسة عقارك الأفضل للشقق التمليك
+       جميع البيانات بين قوسين مربعين [ ] قابلة للتعديل يدوياً
+       هذا الإصدار يدعم روابط فيسبوك تلقائياً (Reels, فيديوهات)
        ============================================================ */
 
-    const SITE_NAME = 'مؤسسة عقارك الأفضل للشقق التمليك';
-
-    // الصور الأساسية (يمكنك استبدالها بصورك الخاصة)
+    // ===== الصور الأساسية (موجودة في مجلد الموقع) =====
     const BASE_IMAGES = Array.from({ length: 19 }, (_, i) => (i + 1) + 'IMG.jpg');
-
-    // ترتيب الصور في السلايدر (12 شريحة)
     const SLIDER_ORDER = [
         '19IMG.jpg', '2IMG.jpg', '4IMG.jpg', '10IMG.jpg',
         '11IMG.jpg', '12IMG.jpg', '13IMG.jpg', '14IMG.jpg',
         '15IMG.jpg', '16IMG.jpg', '17IMG.jpg', '18IMG.jpg'
     ];
 
-    // النصوص الترحيبية
-    const HERO_TITLE = 'مؤسسة عقارك الأفضل';
-    const HERO_SUB = 'شقق تمليك فاخرة في قلب صنعاء';
+    // ===== مفتاح التخزين في localStorage =====
+    const STORAGE_KEY = 'gallery_items';
 
-    // معلومات الاتصال
-    const CONTACT_ADDRESS = 'شارع حدة - إيران، صنعاء، اليمن';
-    const CONTACT_PHONE = '+967 154 259 0776';
-    const CONTACT_EMAIL = 'info@aqaarbest.com';
-    const CONTACT_FB = 'https://www.facebook.com/your.best.aqaar';
-    const CONTACT_IG = 'https://instagram.com/aqaarbest';
-    const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.859086633548!2d44.21428431542347!3d15.354520389277176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1602c3e8c4b7d0b7%3A0x8d8a8e2b9f2b4b2b!2z2YXYsdqp2Kog2YLYs9mFINin2YTYs9mK2YUg2KfZhNiq2LPYqQ!5e0!3m2!1sar!2sye!4v1653923845019';
-    const WHATSAPP_MSG = 'مرحباً، أود الاستفسار عن الشقق التمليك في مؤسسة عقارك الأفضل';
+    // ===== دوال مساعدة لفيسبوك =====
+    function isFacebookUrl(url) {
+        return url.includes('facebook.com') || url.includes('fb.com');
+    }
 
-    /* ============================================================
-       إدارة localStorage للصور المضافة يدوياً
-       ============================================================ */
-    const STORAGE_KEY = 'gallery_extra_images';
+    function getFacebookEmbedUrl(url) {
+        // استخدام واجهة تضمين فيسبوك الرسمية
+        return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=0&width=560`;
+    }
 
-    function getExtraImages() {
+    // ===== هيكل العنصر المخزن: { type, src, platform? } =====
+    function getStoredItems() {
         try {
             const data = localStorage.getItem(STORAGE_KEY);
             return data ? JSON.parse(data) : [];
         } catch { return []; }
     }
 
-    function setExtraImages(images) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(images));
+    function setStoredItems(items) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     }
 
-    function getAllImageNames() {
-        return [...BASE_IMAGES, ...getExtraImages()];
+    function getAllItems() {
+        const stored = getStoredItems();
+        const baseItems = BASE_IMAGES.map(src => ({ type: 'image', src, platform: 'base' }));
+        return [...baseItems, ...stored];
     }
 
-    /* ============================================================
-       بناء السلايدر (Swiper)
-       ============================================================ */
+    // ===== بناء السلايدر =====
     function buildHeroSlider() {
         const wrapper = document.querySelector('.heroSwiper .swiper-wrapper');
         if (!wrapper) return;
         wrapper.innerHTML = '';
 
+        const heroTitle = document.querySelector('.slide-overlay h1')?.textContent || '[نص_ترحيبي_رئيسي]';
+        const heroSub = document.querySelector('.slide-overlay p')?.textContent || '[نص_ترحيبي_فرعي]';
+
         SLIDER_ORDER.forEach((imgName) => {
             const slide = document.createElement('div');
             slide.className = 'swiper-slide';
             slide.innerHTML = `
-                    <img src="${imgName}" alt="${HERO_TITLE}" loading="lazy" decoding="async"
+                    <img src="${imgName}" alt="${heroTitle}" loading="lazy" decoding="async"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="slide-overlay">
-                        <h1>${HERO_TITLE}</h1>
-                        <p>${HERO_SUB}</p>
+                        <h1>${heroTitle}</h1>
+                        <p>${heroSub}</p>
                     </div>
                 `;
             wrapper.appendChild(slide);
@@ -1030,111 +1213,169 @@ aria-label="واتساب">
         });
     }
 
-    /* ============================================================
-       بناء شبكة المعرض
-       ============================================================ */
+    // ===== بناء شبكة المعرض (تدعم فيسبوك) =====
     function renderGallery() {
         const grid = document.getElementById('galleryGrid');
         if (!grid) return;
-        const allImages = getAllImageNames();
+        const items = getAllItems();
         grid.innerHTML = '';
 
-        allImages.forEach((imgName, index) => {
-            const item = document.createElement('div');
-            item.className = 'gallery-item';
-            item.dataset.index = index;
-            item.dataset.src = imgName;
+        items.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            div.dataset.index = index;
 
-            const img = document.createElement('img');
-            img.src = imgName;
-            img.alt = `شقة ${index+1}`;
-            img.loading = 'lazy';
-            img.decoding = 'async';
-            img.onerror = function() {
-                this.style.display = 'none';
-                const placeholder = document.createElement('div');
-                placeholder.className = 'img-placeholder';
-                placeholder.textContent = 'الصورة لم ترفع بعد';
-                this.parentNode.appendChild(placeholder);
-            };
-            item.appendChild(img);
-            item.addEventListener('click', () => openLightbox(index));
-            grid.appendChild(item);
+            // هل هو فيسبوك؟
+            const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
+
+            if (isFb) {
+                // عرض فيسبوك كـ iframe داخل المعرض
+                const wrapper = document.createElement('div');
+                wrapper.className = 'video-wrapper';
+                const iframe = document.createElement('iframe');
+                iframe.src = getFacebookEmbedUrl(item.src);
+                iframe.allowFullscreen = true;
+                iframe.loading = 'lazy';
+                wrapper.appendChild(iframe);
+                div.appendChild(wrapper);
+
+                // شارة فيسبوك
+                const badge = document.createElement('div');
+                badge.className = 'media-badge';
+                badge.innerHTML = '<i class="fa-brands fa-facebook"></i> فيديو';
+                div.appendChild(badge);
+
+                div.addEventListener('click', () => openLightbox(index));
+
+            } else if (item.type === 'video') {
+                // فيديو عادي (MP4)
+                const wrapper = document.createElement('div');
+                wrapper.className = 'video-wrapper';
+                const video = document.createElement('video');
+                video.src = item.src;
+                video.muted = true;
+                video.playsInline = true;
+                video.preload = 'metadata';
+                video.setAttribute('playsinline', '');
+                const icon = document.createElement('div');
+                icon.className = 'play-icon';
+                icon.innerHTML = '<i class="fa-solid fa-play"></i>';
+                wrapper.appendChild(video);
+                wrapper.appendChild(icon);
+                div.appendChild(wrapper);
+                div.addEventListener('click', () => openLightbox(index));
+            } else {
+                // صورة
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = `صورة ${index+1}`;
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                img.onerror = function() {
+                    this.style.display = 'none';
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'img-placeholder';
+                    placeholder.textContent = 'الصورة غير متوفرة';
+                    this.parentNode.appendChild(placeholder);
+                };
+                div.appendChild(img);
+                div.addEventListener('click', () => openLightbox(index));
+            }
+
+            grid.appendChild(div);
         });
     }
 
-    /* ============================================================
-       Lightbox
-       ============================================================ */
+    // ===== Lightbox (يدعم فيسبوك) =====
     let currentLightboxIndex = 0;
-    let lightboxImages = [];
+    let lightboxItems = [];
 
     function openLightbox(index) {
-        lightboxImages = getAllImageNames();
-        if (!lightboxImages.length) return;
-        currentLightboxIndex = Math.min(Math.max(index, 0), lightboxImages.length - 1);
-        const overlay = document.getElementById('lightboxOverlay');
-        overlay.classList.add('active');
+        lightboxItems = getAllItems();
+        if (!lightboxItems.length) return;
+        currentLightboxIndex = Math.min(Math.max(index, 0), lightboxItems.length - 1);
+        document.getElementById('lightboxOverlay').classList.add('active');
         document.body.style.overflow = 'hidden';
-        showLightboxImage(currentLightboxIndex);
+        showLightboxItem(currentLightboxIndex);
     }
 
     function closeLightbox() {
         document.getElementById('lightboxOverlay').classList.remove('active');
         document.body.style.overflow = '';
+        const video = document.getElementById('lbVideo');
+        if (video) { video.pause();
+            video.currentTime = 0; }
+        const iframe = document.getElementById('lbIframe');
+        if (iframe) iframe.src = '';
     }
 
-    function showLightboxImage(index) {
+    function showLightboxItem(index) {
         const img = document.getElementById('lbImage');
+        const video = document.getElementById('lbVideo');
+        const iframeWrapper = document.getElementById('lbIframeWrapper');
+        const iframe = document.getElementById('lbIframe');
         const loader = document.getElementById('lbLoader');
         const counter = document.getElementById('lbCounter');
-        const src = lightboxImages[index] || '';
+        const item = lightboxItems[index] || { type: 'image', src: '' };
 
+        // إخفاء الكل
         img.style.display = 'none';
+        video.style.display = 'none';
+        iframeWrapper.style.display = 'none';
         loader.style.display = 'flex';
 
-        img.onload = function() {
+        const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
+
+        if (isFb) {
+            // فيسبوك -> iframe
+            iframeWrapper.style.display = 'block';
+            iframe.src = getFacebookEmbedUrl(item.src);
             loader.style.display = 'none';
+            // عند تحميل iframe نخفي اللودر
+            iframe.onload = function() { loader.style.display = 'none'; };
+            // مهلة أمان
+            setTimeout(() => { loader.style.display = 'none'; }, 3000);
+        } else if (item.type === 'video') {
+            video.style.display = 'block';
+            video.src = item.src;
+            video.onloadeddata = function() { loader.style.display = 'none';
+                video.play().catch(() => {}); };
+            video.onerror = function() { loader.style.display = 'none'; };
+            video.load();
+        } else {
             img.style.display = 'block';
-        };
-        img.onerror = function() {
-            loader.style.display = 'none';
-            img.style.display = 'block';
-            img.src = '';
-            img.alt = 'الصورة غير متوفرة';
-            const parent = img.parentNode;
-            const existing = parent.querySelector('.lb-error-placeholder');
-            if (!existing) {
+            img.src = item.src;
+            img.onload = function() { loader.style.display = 'none'; };
+            img.onerror = function() {
+                loader.style.display = 'none';
+                img.style.display = 'none';
+                const parent = document.getElementById('lbContent');
                 const div = document.createElement('div');
                 div.className = 'lb-error-placeholder';
                 div.style.cssText =
-                    'color:var(--text-muted); font-size:1.2rem; padding:40px; text-align:center;';
-                div.textContent = 'الصورة لم ترفع بعد';
+                    'color:var(--text-muted); font-size:1.2rem; padding:40px; text-align:center; background:rgba(0,0,0,0.5); border-radius:12px;';
+                div.textContent = 'الصورة غير متوفرة';
                 parent.appendChild(div);
-            }
-        };
-        const oldErr = img.parentNode.querySelector('.lb-error-placeholder');
-        if (oldErr) oldErr.remove();
+            };
+        }
 
-        img.src = src;
-        img.alt = `شقة ${index+1}`;
-        counter.textContent = `${index+1} / ${lightboxImages.length}`;
-
+        counter.textContent = `${index+1} / ${lightboxItems.length}`;
         document.getElementById('lbPrev').style.visibility = index > 0 ? 'visible' : 'hidden';
-        document.getElementById('lbNext').style.visibility = index < lightboxImages.length - 1 ? 'visible' : 'hidden';
+        document.getElementById('lbNext').style.visibility = index < lightboxItems.length - 1 ? 'visible' : 'hidden';
     }
 
+    // أحداث Lightbox
     document.getElementById('lbClose').addEventListener('click', closeLightbox);
     document.getElementById('lbPrev').addEventListener('click', () => {
         if (currentLightboxIndex > 0) {
             currentLightboxIndex--;
-            showLightboxImage(currentLightboxIndex);
+            showLightboxItem(currentLightboxIndex);
         }
     });
     document.getElementById('lbNext').addEventListener('click', () => {
-        if (currentLightboxIndex < lightboxImages.length - 1) {
+        if (currentLightboxIndex < lightboxItems.length - 1) {
             currentLightboxIndex++;
-            showLightboxImage(currentLightboxIndex);
+            showLightboxItem(currentLightboxIndex);
         }
     });
 
@@ -1146,19 +1387,13 @@ aria-label="واتساب">
         const overlay = document.getElementById('lightboxOverlay');
         if (!overlay.classList.contains('active')) return;
         if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') {
-            e.preventDefault();
-            document.getElementById('lbNext').click();
-        }
-        if (e.key === 'ArrowLeft') {
-            e.preventDefault();
-            document.getElementById('lbPrev').click();
-        }
+        if (e.key === 'ArrowRight') { e.preventDefault();
+            document.getElementById('lbNext').click(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault();
+            document.getElementById('lbPrev').click(); }
     });
 
-    /* ============================================================
-       إدارة الصور (Modal)
-       ============================================================ */
+    // ===== إدارة المحتوى (المودال) =====
     const manageModal = document.getElementById('manageModal');
     const openBtn = document.getElementById('openManageBtn');
     const closeModalBtn = document.getElementById('modalClose');
@@ -1168,7 +1403,11 @@ aria-label="واتساب">
     const saveBtn = document.getElementById('saveImagesBtn');
     const storageInfo = document.getElementById('storageInfo');
 
-    let pendingFiles = [];
+    const mediaTypeSelect = document.getElementById('mediaTypeSelect');
+    const mediaUrlInput = document.getElementById('mediaUrlInput');
+    const addLinkBtn = document.getElementById('addLinkBtn');
+
+    let pendingItems = [];
 
     openBtn.addEventListener('click', () => {
         manageModal.classList.add('active');
@@ -1179,7 +1418,7 @@ aria-label="واتساب">
     function closeModal() {
         manageModal.classList.remove('active');
         document.body.style.overflow = '';
-        pendingFiles = [];
+        pendingItems = [];
         fileInput.value = '';
         renderModalPreview();
     }
@@ -1189,6 +1428,7 @@ aria-label="واتساب">
         if (e.target === this) closeModal();
     });
 
+    // رفع الملفات
     uploadArea.addEventListener('click', () => fileInput.click());
     uploadArea.addEventListener('dragover', (e) => {
         e.preventDefault();
@@ -1215,12 +1455,8 @@ aria-label="واتساب">
     function handleFiles(files) {
         for (const file of files) {
             if (!file.type.startsWith('image/')) continue;
-            compressImage(file, 800, 0.85, (compressedDataUrl) => {
-                pendingFiles.push({
-                    name: file.name,
-                    dataUrl: compressedDataUrl,
-                    file: file,
-                });
+            compressImage(file, 800, 0.6, (dataUrl) => {
+                pendingItems.push({ type: 'image', src: dataUrl, platform: 'upload' });
                 renderModalPreview();
             });
         }
@@ -1232,8 +1468,8 @@ aria-label="واتساب">
             const img = new Image();
             img.onload = function() {
                 const canvas = document.createElement('canvas');
-                let width = img.width;
-                let height = img.height;
+                let width = img.width,
+                    height = img.height;
                 if (width > maxWidth) {
                     height = (maxWidth / width) * height;
                     width = maxWidth;
@@ -1242,143 +1478,56 @@ aria-label="واتساب">
                 canvas.height = height;
                 const ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0, width, height);
-                callback(canvas.toDataURL('image/jpeg', quality));
+                try {
+                    callback(canvas.toDataURL('image/webp', quality));
+                } catch {
+                    callback(canvas.toDataURL('image/jpeg', quality));
+                }
             };
             img.src = e.target.result;
         };
         reader.readAsDataURL(file);
     }
 
-    function renderModalPreview() {
-        const extra = getExtraImages();
-        const allPreview = [...extra, ...pendingFiles.map(f => f.dataUrl)];
+    // إضافة رابط مع كشف فيسبوك تلقائي
+    addLinkBtn.addEventListener('click', function() {
+        const url = mediaUrlInput.value.trim();
+        if (!url) { alert('الرجاء إدخال رابط صحيح'); return; }
 
-        previewGrid.innerHTML = '';
-        allPreview.forEach((src, idx) => {
-            const div = document.createElement('div');
-            div.className = 'preview-item';
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = `صورة ${idx+1}`;
-            img.loading = 'lazy';
-            div.appendChild(img);
+        let type = mediaTypeSelect.value;
+        let platform = 'direct';
 
-            const delBtn = document.createElement('button');
-            delBtn.className = 'del-btn';
-            delBtn.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
-            delBtn.title = 'حذف';
-            delBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                if (idx < extra.length) {
-                    const newExtra = extra.filter((_, i) => i !== idx);
-                    setExtraImages(newExtra);
-                    renderModalPreview();
-                    renderGallery();
-                    updateStorageInfo();
-                } else {
-                    const pendingIdx = idx - extra.length;
-                    pendingFiles.splice(pendingIdx, 1);
-                    renderModalPreview();
-                }
-            });
-            div.appendChild(delBtn);
-            previewGrid.appendChild(div);
-        });
-
-        updateStorageInfo();
-    }
-
-    function updateStorageInfo() {
-        const extra = getExtraImages();
-        storageInfo.textContent = `(${extra.length} صورة مخزنة)`;
-    }
-
-    saveBtn.addEventListener('click', function() {
-        if (!pendingFiles.length) return;
-        const extra = getExtraImages();
-        const newImages = pendingFiles.map(f => f.dataUrl);
-        setExtraImages([...extra, ...newImages]);
-        pendingFiles = [];
-        renderModalPreview();
-        renderGallery();
-    });
-
-    window.addEventListener('storage', function(e) {
-        if (e.key === STORAGE_KEY) {
-            renderGallery();
-            if (manageModal.classList.contains('active')) {
-                renderModalPreview();
+        // الكشف التلقائي لفيسبوك
+        if (isFacebookUrl(url)) {
+            type = 'video';
+            platform = 'facebook';
+        } else {
+            // إذا كان المستخدم اختار فيسبوك لكن الرابط ليس فيسبوك، نحوله تلقائي
+            if (type === 'facebook') {
+                alert('الرابط ليس من فيسبوك! سيتم إضافته كفيديو عادي.');
+                type = 'video';
             }
         }
+
+        pendingItems.push({ type, src: url, platform });
+        mediaUrlInput.value = '';
+        renderModalPreview();
     });
 
-    /* ============================================================
-       الهامبرغر
-       ============================================================ */
-    const hamburger = document.getElementById('hamburgerBtn');
-    const navLinks = document.getElementById('navLinks');
+    // معاينة المودال
+    function renderModalPreview() {
+        const stored = getStoredItems();
+        const allPreview = [...stored, ...pendingItems];
 
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('open');
-        const spans = this.querySelectorAll('span');
-        if (navLinks.classList.contains('open')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-        } else {
-            spans[0].style.transform = '';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = '';
-        }
-    });
+        previewGrid.innerHTML = '';
+        allPreview.forEach((item, idx) => {
+            const div = document.createElement('div');
+            div.className = 'preview-item';
 
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            hamburger.querySelectorAll('span').forEach(s => {
-                s.style.transform = '';
-                s.style.opacity = '1';
-            });
-        });
-    });
+            const isFb = item.platform === 'facebook' || (item.type === 'video' && isFacebookUrl(item.src));
 
-    /* ============================================================
-       تهيئة الصفحة
-       ============================================================ */
-    document.addEventListener('DOMContentLoaded', function() {
-        buildHeroSlider();
-        renderGallery();
-        updateStorageInfo();
-
-        // تحديث روابط الاتصال
-        const telLink = document.querySelector('a[href^="tel:"]');
-        if (telLink) telLink.href = `tel:${CONTACT_PHONE.replace(/[^0-9+]/g, '')}`;
-
-        const mailLink = document.querySelector('a[href^="mailto:"]');
-        if (mailLink) mailLink.href = `mailto:${CONTACT_EMAIL}`;
-
-        const waLink = document.querySelector('.whatsapp-float');
-        if (waLink) {
-            const phone = CONTACT_PHONE.replace(/[^0-9+]/g, '');
-            waLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
-        }
-
-        const mapIframe = document.querySelector('.map-wrapper iframe');
-        if (mapIframe) mapIframe.src = MAP_EMBED;
-
-        const fbLink = document.querySelector('.contact-card a[href*="facebook"]');
-        if (fbLink) fbLink.href = CONTACT_FB;
-
-        const igLink = document.querySelector('.contact-card a[href*="instagram"]');
-        if (igLink) igLink.href = CONTACT_IG;
-    });
-
-    // ============================================================
-    // لتشغيل الموقع، ضع الصور بالأسماء المحددة في نفس مجلد الملف.
-    // الصور الأساسية: 1IMG.jpg إلى 19IMG.jpg
-    // ============================================================
-    console.log('✅ تم تهيئة موقع مؤسسة عقارك الأفضل للشقق التمليك بنجاح');
-</script>
-
-</body>
-  </html>
+            if (isFb) {
+                // عرض أيقونة فيسبوك في المعاينة
+                const icon = document.createElement('i');
+                icon.className = 'fa-brands fa-facebook';
+                icon.style.cssText = 'font-size:3rem; color:#1877f2
