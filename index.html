@@ -613,6 +613,27 @@
         .contact-card a:hover {
             color: var(--gold);
         }
+        /* زر واتساب داخل قسم الاتصال */
+        .contact-card.whatsapp-card {
+            background: rgba(37, 211, 102, 0.08);
+            border-color: #25d366;
+        }
+        .contact-card.whatsapp-card:hover {
+            background: rgba(37, 211, 102, 0.15);
+            border-color: #25d366;
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.2);
+        }
+        .contact-card.whatsapp-card i {
+            color: #25d366;
+        }
+        .contact-card.whatsapp-card a {
+            color: #25d366;
+            font-weight: 600;
+        }
+        .contact-card.whatsapp-card a:hover {
+            color: #1ebe5b;
+        }
+
         .map-wrapper {
             border-radius: var(--radius);
             overflow: hidden;
@@ -652,7 +673,6 @@
             box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7);
             animation-play-state: paused;
         }
-        /* تأثير نبض راقي */
         @keyframes pulse-whatsapp {
             0% {
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
@@ -664,7 +684,6 @@
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
         }
-        /* ظهور النص عند التمرير */
         .whatsapp-float::after {
             content: "تواصل واتساب";
             position: absolute;
@@ -1082,7 +1101,7 @@
             <!-- العميل 1: رجل -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=1&v=2" alt="أ. محمد السالمي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=1&v=3" alt="أ. محمد السالمي" loading="lazy">
                 </div>
                 <div class="name">أ. محمد السالمي</div>
                 <div class="title">مستثمر عقاري</div>
@@ -1101,7 +1120,7 @@
             <!-- العميل 2: امرأة -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=2&v=2" alt="د. فاطمة الحارثي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=2&v=3" alt="د. فاطمة الحارثي" loading="lazy">
                 </div>
                 <div class="name">د. فاطمة الحارثي</div>
                 <div class="title">استشارية أسرية</div>
@@ -1120,7 +1139,7 @@
             <!-- العميل 3: رجل -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=3&v=2" alt="م. عبدالله النعيمي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=3&v=3" alt="م. عبدالله النعيمي" loading="lazy">
                 </div>
                 <div class="name">م. عبدالله النعيمي</div>
                 <div class="title">مهندس معماري</div>
@@ -1139,7 +1158,7 @@
             <!-- العميل 4: امرأة (السيدة منى) -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=4&v=2" alt="السيدة منى الشامسي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=4&v=3" alt="السيدة منى الشامسي" loading="lazy">
                 </div>
                 <div class="name">السيدة منى الشامسي</div>
                 <div class="title">ربة منزل</div>
@@ -1155,10 +1174,10 @@
                 </div>
             </div>
 
-            <!-- العميل 5: رجل (اللواء طارق) -->
+            <!-- العميل 5: رجل (اللواء طارق) - صورة رجل -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=5&v=2" alt="اللواء طارق الحمادي" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=5&v=3" alt="اللواء طارق الحمادي" loading="lazy">
                 </div>
                 <div class="name">اللواء طارق الحمادي</div>
                 <div class="title">متقاعد</div>
@@ -1177,7 +1196,7 @@
             <!-- العميل 6: شركة -->
             <div class="testimonial-card">
                 <div class="avatar">
-                    <img src="https://i.pravatar.cc/150?img=6&v=2" alt="شركة ريتاج للتطوير" loading="lazy">
+                    <img src="https://i.pravatar.cc/150?img=6&v=3" alt="شركة ريتاج للتطوير" loading="lazy">
                 </div>
                 <div class="name">شركة ريتاج للتطوير</div>
                 <div class="title">شريك أعمال</div>
@@ -1224,6 +1243,12 @@
                     <i class="fa-brands fa-instagram"></i>
                     <h4>إنستغرام</h4>
                     <a href="https://www.instagram.com/your.best.aqaar" target="_blank">@your.best.aqaar</a>
+                </div>
+                <!-- زر واتساب الجديد داخل قسم الاتصال -->
+                <div class="contact-card whatsapp-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h4>واتساب</h4>
+                    <a href="https://wa.me/967776259154?text=مرحباً،%20أود%20الاستفسار%20عن%20الشقق%20التمليك%20في%20مؤسسة%20عقارك%20الأفضل" target="_blank">تواصل عبر واتساب</a>
                 </div>
             </div>
             <div class="map-wrapper">
@@ -1388,7 +1413,7 @@ aria-label="تواصل واتساب">
         new Swiper('.heroSwiper', {
             effect: 'fade',
             fadeEffect: { crossFade: true },
-            autoplay: { delay: 3000, disableOnInteraction: false }, // تغيير السرعة إلى 3 ثواني
+            autoplay: { delay: 3000, disableOnInteraction: false },
             loop: true,
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             pagination: { el: '.swiper-pagination', clickable: true },
@@ -1809,10 +1834,12 @@ aria-label="تواصل واتساب">
         if (telLink) telLink.href = `tel:${CONTACT_PHONE_RAW}`;
         const mailLink = document.querySelector('a[href^="mailto:"]');
         if (mailLink) mailLink.href = `mailto:${CONTACT_EMAIL}`;
-        const waLink = document.querySelector('.whatsapp-float');
-        if (waLink) {
-            waLink.href = `https://wa.me/${CONTACT_PHONE_RAW}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
-        }
+        // تحديث روابط واتساب (العائم والجديد)
+        const waLinks = document.querySelectorAll('.whatsapp-float, .whatsapp-card a');
+        waLinks.forEach(link => {
+            link.href =
+                `https://wa.me/${CONTACT_PHONE_RAW}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
+        });
         const mapIframe = document.querySelector('.map-wrapper iframe');
         if (mapIframe) mapIframe.src = MAP_EMBED;
         const fbLink = document.querySelector('.contact-card a[href*="facebook"]');
@@ -1821,7 +1848,7 @@ aria-label="تواصل واتساب">
         if (igLink) igLink.href = CONTACT_IG;
     });
 
-    console.log('✅ تم تهيئة الموقع مع سرعة سلايدر 3 ثواني وزر واتساب راقي');
+    console.log('✅ تم تهيئة الموقع مع تصحيح صور الآراء وزر واتساب جديد');
 </script>
 </body>
     </html>
