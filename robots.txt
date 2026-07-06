@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://your-best-aqaar.netlify.app/sitemap.xml
